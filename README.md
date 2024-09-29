@@ -1830,15 +1830,4 @@
 
                 renderProducts(products);
             } else {
-                alert('Contraseña incorrecta. No se pueden realizar cambios.');
-            }
-        }
-
-        function buyProduct(productName) {
-            window.location.href = `https://api.whatsapp.com/send?phone=+3206572598&text=*Hola%20quiero%20que%20me%20env%C3%ADes%20este%20producto*%20${productName}%20*aqu%C3%AD%20te%20env%C3%ADo%20mi%20nombre%20y%20direcci%C3%B3n%20completa*`;
-        }
-    </script>
-</body>
-</html>
-
-
+                alert('Contraseña incorrecta. No se pueden realizar
