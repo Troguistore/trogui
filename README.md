@@ -9,39 +9,44 @@
     background-color: #ff6000;
     font-family: Arial, sans-serif;
     margin: 0;
-    color: #333;
   }
   header {
     text-align: center;
-    font-size: 32px;
-    font-weight: bold;
+    background-color: #ff6000;
     color: #000;
-    padding: 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px;
   }
   .barra-carrito {
     background-color: #000;
     color: #fff;
-    padding: 12px 0;
-    font-size: 18px;
     text-align: center;
-    user-select: none;
-    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  .barra-carrito span {
+    min-width: 120px;
   }
   .productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto 40px;
   }
   .producto {
-    background-color: #fff;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   .producto img {
     width: 100%;
@@ -50,55 +55,65 @@
   }
   .producto h2 {
     color: #ff6000;
+    margin: 10px;
     font-size: 20px;
-    margin: 12px 15px 6px;
   }
   .descripcion {
+    color: #333;
     font-size: 14px;
-    margin: 0 15px 12px;
-    line-height: 1.4;
+    margin: 0 10px 10px;
+    line-height: 1.4em;
+    min-height: 56px; /* aprox 4 líneas */
   }
-  .descripcion .texto-visible {
-    display: inline;
-  }
-  .descripcion .texto-oculto {
+  .descripcion .mas {
     display: none;
   }
-  .leer-mas {
+  .descripcion .leer-mas {
     color: #007bff;
     font-weight: bold;
     cursor: pointer;
     user-select: none;
   }
+  .precio {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
   .botones {
     display: flex;
     gap: 10px;
-    margin: 0 15px 15px;
+    margin: 10px;
   }
   .btn-carrito, .btn-whatsapp {
     flex: 1;
-    padding: 10px;
-    font-size: 15px;
+    padding: 12px 0;
     border: none;
     border-radius: 5px;
+    font-size: 15px;
     cursor: pointer;
-    color: white;
-    text-align: center;
-    user-select: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
   }
   .btn-carrito {
     background-color: #000;
+    color: #fff;
+  }
+  .btn-carrito:hover {
+    background-color: #333;
   }
   .btn-whatsapp {
     background-color: #25d366;
-    text-decoration: none;
-    display: inline-block;
+    color: #fff;
+  }
+  .btn-whatsapp:hover {
+    background-color: #1da851;
   }
   footer {
     text-align: center;
     color: #fff;
-    padding: 12px 0;
+    padding: 15px;
     font-size: 14px;
+    background-color: #ff6000;
   }
 </style>
 </head>
@@ -106,51 +121,56 @@
 
 <header>TROGUI</header>
 
-<div class="barra-carrito" onclick="comprarCarrito()">
-  🛒 Carrito: <span id="cantidad">0</span> producto(s) | Total: $<span id="total">0</span> COP
+<div class="barra-carrito">
+  <span>🛒 Productos: <strong id="cantidad">0</strong></span>
+  <span>Total: $<strong id="total">0</strong> COP</span>
+  <button class="btn-whatsapp" style="flex: 0 0 auto; padding: 10px 15px;" onclick="enviarWhatsAppCarrito()">Comprar por WhatsApp</button>
 </div>
 
-<div class="productos">
+<div class="productos" id="productos">
 
-  <div class="producto">
-    <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/270260/1724105603four_trays_towel_bar.jpg" alt="Organizador Esquinero">
+  <!-- Producto 1 -->
+  <div class="producto" data-nombre="Organizador Esquinero" data-precio="50000">
+    <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/270260/1724105603four_trays_towel_bar.jpg" alt="Organizador Esquinero" />
     <h2>Organizador Esquinero</h2>
-    <div class="descripcion" data-texto-completo="Fabricado en acero inoxidable con acabado negro antióxido, este organizador esquinero soporta hasta 200 libras. Su diseño ventilado mantiene frutas y verduras frescas y evita la humedad. Cuenta con ruedas giratorias 360° con frenos para movilidad y estabilidad. Ideal para cocinas, baños, oficinas y más. No requiere instalación y es fácil de limpiar.">
-      <span class="texto-visible"></span><span class="texto-oculto"></span>
+    <div class="descripcion">
+      <span class="preview"></span><span class="mas"></span>
       <span class="leer-mas" onclick="toggleDescripcion(this)">Leer más</span>
     </div>
-    <p style="margin: 0 15px 10px; font-weight:bold;">Precio: $50,000 COP</p>
+    <div class="precio">Precio: $50,000 COP</div>
     <div class="botones">
       <button class="btn-carrito" onclick="agregarAlCarrito('Organizador Esquinero', 50000)">Añadir al carrito</button>
-      <a class="btn-whatsapp" href="#" onclick="comprarAhora('Organizador Esquinero', 50000)">Comprar por WhatsApp</a>
+      <button class="btn-whatsapp" onclick="comprarAhora('Organizador Esquinero', 50000)">Comprar por WhatsApp</button>
     </div>
   </div>
 
-  <div class="producto">
-    <img src="https://image.made-in-china.com/2f0j00cMJViCrPkeGm/Estante-De-Almacenamiento-Giratorio-De-5-Niveles-Cesta-De-Verduras-Multicapa-Giratoria-De-360-Grados-Organizador-De-Metal-Y-PC-PARA-Cocina-10-Uds-.webp" alt="Estante Giratorio">
+  <!-- Producto 2 -->
+  <div class="producto" data-nombre="Estante Giratorio" data-precio="70000">
+    <img src="https://image.made-in-china.com/2f0j00cMJViCrPkeGm/Estante-De-Almacenamiento-Giratorio-De-5-Niveles-Cesta-De-Verduras-Multicapa-Giratoria-De-360-Grados-Organizador-De-Metal-Y-PC-PARA-Cocina-10-Uds-.webp" alt="Estante Giratorio" />
     <h2>Estante Giratorio</h2>
-    <div class="descripcion" data-texto-completo="Este estante giratorio de 5 niveles maximiza el espacio de almacenamiento. Fabricado con metal resistente y PC duradero, es ideal para almacenar frutas, verduras y artículos de limpieza. Su diseño giratorio de 360 grados facilita el acceso y mantiene tu cocina o baño ordenados y limpios. Resistente a la corrosión y fácil de limpiar.">
-      <span class="texto-visible"></span><span class="texto-oculto"></span>
+    <div class="descripcion">
+      <span class="preview"></span><span class="mas"></span>
       <span class="leer-mas" onclick="toggleDescripcion(this)">Leer más</span>
     </div>
-    <p style="margin: 0 15px 10px; font-weight:bold;">Precio: $70,000 COP</p>
+    <div class="precio">Precio: $70,000 COP</div>
     <div class="botones">
       <button class="btn-carrito" onclick="agregarAlCarrito('Estante Giratorio', 70000)">Añadir al carrito</button>
-      <a class="btn-whatsapp" href="#" onclick="comprarAhora('Estante Giratorio', 70000)">Comprar por WhatsApp</a>
+      <button class="btn-whatsapp" onclick="comprarAhora('Estante Giratorio', 70000)">Comprar por WhatsApp</button>
     </div>
   </div>
 
-  <div class="producto">
-    <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/921548/1729192710171258895217018792991701879299Jkk7xvfHpZ5pl65qAuBlpNNcNECiV4wLumqrDTkN%20(1).jpg" alt="Trapeador Giratorio">
+  <!-- Producto 3 -->
+  <div class="producto" data-nombre="Trapeador Giratorio" data-precio="30000">
+    <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/921548/1729192710171258895217018792991701879299Jkk7xvfHpZ5pl65qAuBlpNNcNECiV4wLumqrDTkN%20(1).jpg" alt="Trapeador Giratorio" />
     <h2>Trapeador Giratorio</h2>
-    <div class="descripcion" data-texto-completo="Trapeador con cabezal de microfibra ultra absorbente que atrapa suciedad y polvo. Su balde con sistema centrifugador 360° mantiene el agua limpia mientras limpias, ahorrando esfuerzo y tiempo. Perfecto para mantener pisos impecables en menos tiempo, con alta durabilidad y facilidad de uso.">
-      <span class="texto-visible"></span><span class="texto-oculto"></span>
+    <div class="descripcion">
+      <span class="preview"></span><span class="mas"></span>
       <span class="leer-mas" onclick="toggleDescripcion(this)">Leer más</span>
     </div>
-    <p style="margin: 0 15px 10px; font-weight:bold;">Precio: $30,000 COP</p>
+    <div class="precio">Precio: $30,000 COP</div>
     <div class="botones">
       <button class="btn-carrito" onclick="agregarAlCarrito('Trapeador Giratorio', 30000)">Añadir al carrito</button>
-      <a class="btn-whatsapp" href="#" onclick="comprarAhora('Trapeador Giratorio', 30000)">Comprar por WhatsApp</a>
+      <button class="btn-whatsapp" onclick="comprarAhora('Trapeador Giratorio', 30000)">Comprar por WhatsApp</button>
     </div>
   </div>
 
@@ -159,87 +179,89 @@
 <footer>&copy; 2025 TROGUI</footer>
 
 <script>
-  // Función para mostrar solo las primeras 15 palabras y ocultar el resto
-  function inicializarDescripciones() {
-    const descripciones = document.querySelectorAll('.descripcion');
-    descripciones.forEach(desc => {
-      const textoCompleto = desc.getAttribute('data-texto-completo').trim();
-      const palabras = textoCompleto.split(' ');
-      if (palabras.length <= 15) {
-        // Si tiene 15 o menos palabras, mostrar todo y ocultar botón leer más
-        desc.querySelector('.texto-visible').textContent = textoCompleto;
-        desc.querySelector('.leer-mas').style.display = 'none';
-      } else {
-        const visibles = palabras.slice(0, 15).join(' ') + '... ';
-        const ocultas = palabras.slice(15).join(' ');
-        desc.querySelector('.texto-visible').textContent = visibles;
-        desc.querySelector('.texto-oculto').textContent = ocultas;
-        desc.querySelector('.texto-oculto').style.display = 'none';
-      }
+  // Descripciones completas para cada producto
+  const descripcionesCompletas = {
+    "Organizador Esquinero": "Este organizador aprovecha cada rincón con estilo y funcionalidad. Fabricado en acero inoxidable con acabado negro antióxido, soporta hasta 200 libras y su diseño de cestas ventiladas evita la humedad y mantiene frutas y vegetales frescos. Con ruedas giratorias 360° y frenos para estabilidad, es ideal para cocinas, baños, oficinas y más.",
+    "Estante Giratorio": "Un práctico organizador giratorio que maximiza tu espacio. Sus cinco niveles permiten almacenar frutas, verduras o artículos de limpieza con facilidad. Fabricado en metal y PC de alta resistencia, es resistente a la corrosión y puede colocarse en la cocina, baño o cualquier lugar que necesite orden.",
+    "Trapeador Giratorio": "Limpieza fácil y rápida con el trapeador giratorio. Su cabezal de microfibra ultra absorbente atrapa la suciedad y el polvo con facilidad. El balde con sistema de centrifugado 360° mantiene el agua limpia y reduce el esfuerzo. ¡Ideal para pisos relucientes en menos tiempo!"
+  };
+
+  // Mostrar solo las primeras 15 palabras inicialmente
+  function setupDescripcion() {
+    const productos = document.querySelectorAll('.producto');
+    productos.forEach(prod => {
+      const nombre = prod.dataset.nombre;
+      const fullText = descripcionesCompletas[nombre];
+      const palabras = fullText.split(' ');
+      const previewTexto = palabras.slice(0, 15).join(' ') + (palabras.length > 15 ? '...' : '');
+      const previewSpan = prod.querySelector('.preview');
+      const masSpan = prod.querySelector('.mas');
+      previewSpan.textContent = previewTexto;
+      masSpan.textContent = palabras.length > 15 ? palabras.slice(15).join(' ') : '';
     });
   }
 
-  function toggleDescripcion(elemento) {
-    const desc = elemento.parentElement;
-    const textoOculto = desc.querySelector('.texto-oculto');
-    if (textoOculto.style.display === 'none') {
-      textoOculto.style.display = 'inline';
-      elemento.textContent = 'Leer menos';
-      // quitar "..." de visible
-      let textoVisible = desc.querySelector('.texto-visible').textContent;
-      if (textoVisible.endsWith('... ')) {
-        desc.querySelector('.texto-visible').textContent = textoVisible.slice(0, -4) + ' ';
-      }
+  function toggleDescripcion(el) {
+    const mas = el.previousElementSibling;
+    if (mas.style.display === 'inline') {
+      mas.style.display = 'none';
+      el.textContent = 'Leer más';
     } else {
-      textoOculto.style.display = 'none';
-      elemento.textContent = 'Leer más';
-      // agregar "..." si no está
-      let textoVisible = desc.querySelector('.texto-visible').textContent;
-      if (!textoVisible.endsWith('... ')) {
-        desc.querySelector('.texto-visible').textContent = textoVisible.trim() + '... ';
-      }
+      mas.style.display = 'inline';
+      el.textContent = 'Leer menos';
     }
   }
 
-  // Carrito global
+  // Carrito
   let carrito = [];
   let cantidad = 0;
   let total = 0;
 
+  function actualizarBarra() {
+    document.getElementById('cantidad').textContent = cantidad;
+    document.getElementById('total').textContent = total.toLocaleString('es-CO');
+  }
+
   function agregarAlCarrito(nombre, precio) {
-    carrito.push({ nombre, precio });
+    // Ver si ya existe el producto en el carrito
+    const index = carrito.findIndex(p => p.nombre === nombre);
+    if (index >= 0) {
+      carrito[index].cantidad++;
+    } else {
+      carrito.push({ nombre, precio, cantidad: 1 });
+    }
     cantidad++;
     total += precio;
-    actualizarBarraCarrito();
+    actualizarBarra();
+    alert(`Agregaste "${nombre}" al carrito.`);
   }
 
-  function actualizarBarraCarrito() {
-    document.getElementById('cantidad').innerText = cantidad;
-    document.getElementById('total').innerText = total.toLocaleString();
-  }
-
+  // Comprar un solo producto directamente
   function comprarAhora(nombre, precio) {
-    const mensaje = `¡Hola! Quiero comprar:\n- ${nombre} ($${precio.toLocaleString()} COP)\n\nGracias.`;
-    const url = `https://wa.me/573001234567?text=${encodeURIComponent(mensaje)}`;
+    const texto = `¡Hola! Quisiera realizar una compra en tu tienda. ¿Puedes ayudarme con los detalles de mi pedido? Producto: ${nombre} - Precio: $${precio.toLocaleString('es-CO')} COP`;
+    const url = `https://wa.me/573206572598?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
   }
 
-  function comprarCarrito() {
+  // Comprar todos los productos del carrito
+  function enviarWhatsAppCarrito() {
     if (carrito.length === 0) {
-      alert('El carrito está vacío.');
+      alert("Tu carrito está vacío. Añade productos para comprar.");
       return;
     }
-    let mensaje = '¡Hola! Quiero comprar los siguientes productos:\n';
-    carrito.forEach((item, index) => {
-      mensaje += `${index + 1}. ${item.nombre} ($${item.precio.toLocaleString()} COP)\n`;
+
+    let texto = "¡Hola! Quisiera realizar una compra en tu tienda. ¿Puedes ayudarme con los detalles de mi pedido? \n\nProductos:\n";
+    carrito.forEach(p => {
+      texto += `- ${p.nombre} x${p.cantidad} = $${(p.precio * p.cantidad).toLocaleString('es-CO')} COP\n`;
     });
-    mensaje += `\nTotal: $${total.toLocaleString()} COP\n\nGracias.`;
-    const url = `https://wa.me/573001234567?text=${encodeURIComponent(mensaje)}`;
+    texto += `\nTotal: $${total.toLocaleString('es-CO')} COP`;
+
+    const url = `https://wa.me/573206572598?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
   }
 
-  // Inicializamos las descripciones al cargar
-  window.onload = inicializarDescripciones;
+  // Inicializar descripciones
+  setupDescripcion();
 </script>
 
 </body>
