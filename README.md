@@ -1,170 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TROGUI - Tienda Online</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff;
-      color: #000;
-    }
-    header {
-      background-color: #cc6600; /* naranja oscuro */
-      color: #000;
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      user-select: none;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
-    .header-info {
-      margin-top: 0.3rem;
-      color: #fff;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    .cart-info {
-      margin-top: 0.5rem;
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.1rem;
-      user-select: text;
-    }
-    main {
-      padding: 1rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    #productsGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-      gap: 1rem;
-    }
-    .product-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      background: #fff;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-    .product-card:hover {
-      box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
-    }
-    .product-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      background: #eee;
-    }
-    .product-content {
-      padding: 1rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .product-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin: 0 0 0.5rem 0;
-      color: #333;
-      text-align: center;
-    }
-    .product-price {
-      font-weight: 700;
-      color: #cc6600;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    .product-desc {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 1rem;
-      text-align: center;
-      min-height: 44px;
-    }
-    .buttons {
-      display: flex;
-      gap: 0.7rem;
-      justify-content: center;
-    }
-    .btn-add {
-      flex: 1;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      padding: 0.6rem;
-      font-weight: 700;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .btn-add:hover,
-    .btn-add:focus {
-      background-color: #333;
-      outline: none;
-    }
-    .btn-buy {
-      flex: 1;
-      background-color: #25d366;
-      color: #fff;
-      border: none;
-      padding: 0.6rem;
-      font-weight: 700;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .btn-buy:hover,
-    .btn-buy:focus {
-      background-color: #1ebe56;
-      outline: none;
-    }
-    #sendCartBtn {
-      margin-top: 1rem;
-      background-color: #25d366;
-      color: #fff;
-      font-weight: 700;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      transition: background-color 0.3s ease;
-    }
-    #sendCartBtn:disabled {
-      background-color: #a5d6a7;
-      cursor: not-allowed;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: 2rem;
-      user-select: none;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TROGUI - Tienda Online</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #000;
+  }
+  header {
+    background-color: #ff6000; /* naranja más vivo */
+    color: #000;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    user-select: none;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  .header-info {
+    margin-top: 0.3rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .cart-info {
+    margin-top: 0.5rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    user-select: text;
+  }
+  main {
+    padding: 1rem;
+    max-width: 1100px;
+    margin: auto;
+  }
+  #productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .product-card:hover {
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
+  }
+  .product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; /* para que se vea toda la imagen completa */
+    background: #eee;
+  }
+  .product-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    text-align: center;
+  }
+  .product-price {
+    font-weight: 700;
+    color: #ff6000;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .product-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: center;
+    min-height: 44px;
+  }
+  .buttons {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+  }
+  .btn-add {
+    flex: 1;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-add:hover,
+  .btn-add:focus {
+    background-color: #333;
+    outline: none;
+  }
+  .btn-buy {
+    flex: 1;
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-buy:hover,
+  .btn-buy:focus {
+    background-color: #1ebe56;
+    outline: none;
+  }
+  #sendCartBtn {
+    margin-top: 1rem;
+    background-color: #25d366;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+  }
+  #sendCartBtn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 2rem;
+    user-select: none;
+  }
+</style>
 </head>
 <body>
 
@@ -304,7 +304,6 @@
     window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, "_blank");
   }
 
-  // Cargar productos
   products.forEach(prod => {
     productsGrid.appendChild(createProductCard(prod));
   });
