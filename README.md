@@ -15,7 +15,7 @@
       color: #000;
     }
     header {
-      background-color: #ff6f00; /* naranja oscuro */
+      background-color: #cc6600; /* naranja oscuro */
       color: #000;
       padding: 1rem;
       text-align: center;
@@ -202,7 +202,7 @@
       name: "Organizador de Baño Esquinero",
       price: 59000,
       shortDesc: "Organiza tu baño con este estante resistente y sin necesidad de tornillos.",
-      img: "https://d39ru7awumhhs2.cloudfront.net/colombia/products/883693/1716500557imagen_2024-05-23_164213721.png"
+      img: "https://cdn.pixabay.com/photo/2016/03/27/21/56/shelf-1283913_1280.jpg"
     },
     {
       id: 3,
