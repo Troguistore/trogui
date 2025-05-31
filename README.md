@@ -26,6 +26,7 @@
     text-align: center;
     padding: 10px;
     font-size: 16px;
+    cursor: pointer;
   }
 
   .productos {
@@ -57,10 +58,18 @@
     margin: 10px;
   }
 
-  .producto p {
+  .producto .descripcion {
     color: #333;
     font-size: 14px;
     margin: 0 10px 10px;
+  }
+
+  .leer-mas {
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 10px 10px;
+    text-decoration: underline;
   }
 
   .botones {
@@ -102,6 +111,7 @@
 <body>
 
 <header>TROGUI</header>
+
 <div class="barra-carrito">
   🛒 Carrito: <span id="cantidad">0</span> producto(s) | Total: $<span id="total">0</span> COP
 </div>
@@ -111,43 +121,31 @@
   <div class="producto">
     <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/270260/1724105603four_trays_towel_bar.jpg" alt="Organizador Esquinero">
     <h2>Organizador Esquinero</h2>
+    <p class="descripcion">
+      Práctico organizador de esquina con estructura metálica resistente. 
+      <span class="mas" style="display:none;">
+        Ideal para baños y cocinas, soporta gran peso y ahorra espacio.
+        Dimensiones ajustables y diseño elegante.
+      </span>
+      <span class="leer-mas" onclick="leerMas(this)">Leer más</span>
+    </p>
     <p>Precio: $50,000 COP</p>
     <div class="botones">
       <button class="btn-carrito" onclick="agregarAlCarrito('Organizador Esquinero', 50000)">Añadir al carrito</button>
       <a class="btn-whatsapp" href="#" onclick="comprarAhora('Organizador Esquinero', 50000)">Comprar por WhatsApp</a>
     </div>
   </div>
-  <div class="producto">
-    <img src="https://image.made-in-china.com/2f0j00cMJViCrPkeGm/Estante-De-Almacenamiento-Giratorio-De-5-Niveles-Cesta-De-Verduras-Multicapa-Giratoria-De-360-Grados-Organizador-De-Metal-Y-PC-PARA-Cocina-10-Uds-.webp" alt="Estante Giratorio">
-    <h2>Estante Giratorio</h2>
-    <p>Precio: $70,000 COP</p>
-    <div class="botones">
-      <button class="btn-carrito" onclick="agregarAlCarrito('Estante Giratorio', 70000)">Añadir al carrito</button>
-      <a class="btn-whatsapp" href="#" onclick="comprarAhora('Estante Giratorio', 70000)">Comprar por WhatsApp</a>
-    </div>
-  </div>
-  <div class="producto">
-    <img src="https://image.made-in-china.com/2f0j00cMJViCrPkeGm/Estante-De-Almacenamiento-Giratorio-De-5-Niveles-Cesta-De-Verduras-Multicapa-Giratoria-De-360-Grados-Organizador-De-Metal-Y-PC-PARA-Cocina-10-Uds-.webp" alt="Estante Giratorio">
-    <h2>Estante Giratorio</h2>
-    <p>Precio: $70,000 COP</p>
-    <div class="botones">
-      <button class="btn-carrito" onclick="agregarAlCarrito('Estante Giratorio', 70000)">Añadir al carrito</button>
-      <a class="btn-whatsapp" href="#" onclick="comprarAhora('Estante Giratorio', 70000)">Comprar por WhatsApp</a>
-    </div>
-  </div>
-  <div class="producto">
-    <img src="https://image.made-in-china.com/2f0j00cMJViCrPkeGm/Estante-De-Almacenamiento-Giratorio-De-5-Niveles-Cesta-De-Verduras-Multicapa-Giratoria-De-360-Grados-Organizador-De-Metal-Y-PC-PARA-Cocina-10-Uds-.webp" alt="Estante Giratorio">
-    <h2>Estante Giratorio</h2>
-    <p>Precio: $70,000 COP</p>
-    <div class="botones">
-      <button class="btn-carrito" onclick="agregarAlCarrito('Estante Giratorio', 70000)">Añadir al carrito</button>
-      <a class="btn-whatsapp" href="#" onclick="comprarAhora('Estante Giratorio', 70000)">Comprar por WhatsApp</a>
-    </div>
-  </div>
 
   <div class="producto">
     <img src="https://image.made-in-china.com/2f0j00cMJViCrPkeGm/Estante-De-Almacenamiento-Giratorio-De-5-Niveles-Cesta-De-Verduras-Multicapa-Giratoria-De-360-Grados-Organizador-De-Metal-Y-PC-PARA-Cocina-10-Uds-.webp" alt="Estante Giratorio">
     <h2>Estante Giratorio</h2>
+    <p class="descripcion">
+      Estante multifuncional giratorio de 360°. 
+      <span class="mas" style="display:none;">
+        Fabricado en acero inoxidable, gran capacidad de carga. Ideal para frutas, verduras y utensilios de cocina.
+      </span>
+      <span class="leer-mas" onclick="leerMas(this)">Leer más</span>
+    </p>
     <p>Precio: $70,000 COP</p>
     <div class="botones">
       <button class="btn-carrito" onclick="agregarAlCarrito('Estante Giratorio', 70000)">Añadir al carrito</button>
@@ -158,6 +156,13 @@
   <div class="producto">
     <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/921548/1729192710171258895217018792991701879299Jkk7xvfHpZ5pl65qAuBlpNNcNECiV4wLumqrDTkN%20(1).jpg" alt="Trapeador Giratorio">
     <h2>Trapeador Giratorio</h2>
+    <p class="descripcion">
+      Trapeador con sistema de giro 360º, cabezal de microfibra ultra absorbente. 
+      <span class="mas" style="display:none;">
+        Ideal para todo tipo de pisos, limpia 6 veces más rápido que los tradicionales.
+      </span>
+      <span class="leer-mas" onclick="leerMas(this)">Leer más</span>
+    </p>
     <p>Precio: $30,000 COP</p>
     <div class="botones">
       <button class="btn-carrito" onclick="agregarAlCarrito('Trapeador Giratorio', 30000)">Añadir al carrito</button>
@@ -202,6 +207,18 @@
     const url = `https://wa.me/573206572598?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
   });
+
+  // Leer más
+  function leerMas(elemento) {
+    const masTexto = elemento.previousElementSibling;
+    if (masTexto.style.display === 'none') {
+      masTexto.style.display = 'inline';
+      elemento.innerText = 'Leer menos';
+    } else {
+      masTexto.style.display = 'none';
+      elemento.innerText = 'Leer más';
+    }
+  }
 </script>
 
 </body>
