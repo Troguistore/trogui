@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TROGUI - Tienda Online</title>
   <style>
-    /* Reset básico */
     * {
       box-sizing: border-box;
     }
@@ -16,10 +15,10 @@
       color: #000;
     }
     header {
-      background-color: #cc6600; /* naranja más oscuro */
+      background-color: #cc6600; /* naranja oscuro */
       color: #000;
       padding: 1rem;
-      text-align: center; /* centrar TROGUI */
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -33,9 +32,16 @@
     }
     .header-info {
       margin-top: 0.3rem;
-      color: #fff; /* blanco para contraste */
+      color: #fff;
       font-weight: 600;
       font-size: 1rem;
+    }
+    .cart-info {
+      margin-top: 0.5rem;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      user-select: text;
     }
     main {
       padding: 1rem;
@@ -92,7 +98,7 @@
       color: #555;
       margin-bottom: 1rem;
       text-align: center;
-      min-height: 44px; /* para evitar saltos al leer más */
+      min-height: 44px;
     }
     .buttons {
       display: flex;
@@ -117,7 +123,7 @@
     }
     .btn-buy {
       flex: 1;
-      background-color: #25d366; /* verde WhatsApp */
+      background-color: #25d366;
       color: #fff;
       border: none;
       padding: 0.6rem;
@@ -130,6 +136,25 @@
     .btn-buy:focus {
       background-color: #1ebe56;
       outline: none;
+    }
+    #sendCartBtn {
+      margin-top: 1rem;
+      background-color: #25d366;
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.3s ease;
+    }
+    #sendCartBtn:disabled {
+      background-color: #a5d6a7;
+      cursor: not-allowed;
     }
     footer {
       text-align: center;
@@ -146,12 +171,17 @@
 <header role="banner" aria-label="Encabezado principal">
   <h1>TROGUI</h1>
   <div class="header-info" aria-live="polite">Envío gratis, pago contra entrega toda Colombia</div>
+  <div class="cart-info" id="cartTotal" aria-live="polite" aria-atomic="true">Carrito: vacío</div>
 </header>
 
 <main>
   <section id="productsGrid" aria-live="polite" aria-label="Listado de productos">
-    <!-- Productos se generan aquí -->
+    <!-- Productos generados aquí -->
   </section>
+
+  <button id="sendCartBtn" disabled aria-disabled="true" aria-label="Enviar pedido completo por WhatsApp">
+    Comprar todo por WhatsApp
+  </button>
 </main>
 
 <footer>
@@ -190,11 +220,38 @@
     }
   ];
 
+  const waNumber = "573206572598";
   const productsGrid = document.getElementById("productsGrid");
-  const waNumber = "573206572598"; // Número correcto WhatsApp
+  const cartTotalDiv = document.getElementById("cartTotal");
+  const sendCartBtn = document.getElementById("sendCartBtn");
+
+  let cart = [];
 
   function formatPrice(num) {
     return num.toLocaleString('es-CO', { style: 'currency', currency: 'COP' });
+  }
+
+  function updateCartInfo() {
+    if(cart.length === 0) {
+      cartTotalDiv.textContent = "Carrito: vacío";
+      sendCartBtn.disabled = true;
+      sendCartBtn.setAttribute("aria-disabled", "true");
+    } else {
+      const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
+      cartTotalDiv.textContent = `Carrito: ${cart.length} producto(s) - Total: ${formatPrice(total)}`;
+      sendCartBtn.disabled = false;
+      sendCartBtn.setAttribute("aria-disabled", "false");
+    }
+  }
+
+  function addToCart(product) {
+    const existing = cart.find(item => item.id === product.id);
+    if(existing) {
+      existing.qty++;
+    } else {
+      cart.push({...product, qty: 1});
+    }
+    updateCartInfo();
   }
 
   function createProductCard(product) {
@@ -220,28 +277,41 @@
     const buyBtn = article.querySelector(".btn-buy");
 
     addBtn.addEventListener("click", () => {
-      alert(`Producto "${product.name}" añadido al carrito.`);
-      // Aquí puedes agregar funcionalidad para un carrito real si quieres
+      addToCart(product);
+      addBtn.textContent = "Añadido ✓";
+      setTimeout(() => addBtn.textContent = "Añadir al carrito", 1500);
     });
 
     buyBtn.addEventListener("click", () => {
-      const msg = `¡Hola! Quisiera comprar el producto: ${product.name} por favor.`;
-      const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
-      window.open(url, "_blank", "noopener");
+      const message = encodeURIComponent(`¡Hola! Quisiera realizar la compra del producto: "${product.name}" por ${formatPrice(product.price)}. ¿Me ayudas con los detalles?`);
+      window.open(`https://wa.me/${waNumber}?text=${message}`, "_blank");
     });
 
     return article;
   }
 
-  function renderProducts() {
-    productsGrid.innerHTML = "";
-    products.forEach(product => {
-      const card = createProductCard(product);
-      productsGrid.appendChild(card);
+  function sendCartWhatsApp() {
+    if(cart.length === 0) return;
+
+    let message = "¡Hola! Quisiera realizar la compra de estos productos:\n\n";
+    cart.forEach(item => {
+      message += `- ${item.name} x${item.qty} = ${formatPrice(item.price * item.qty)}\n`;
     });
+    const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
+    message += `\nTotal: ${formatPrice(total)}\n\n¿Me ayudas con los detalles?`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, "_blank");
   }
 
-  renderProducts();
+  // Cargar productos
+  products.forEach(prod => {
+    productsGrid.appendChild(createProductCard(prod));
+  });
+
+  sendCartBtn.addEventListener("click", sendCartWhatsApp);
+
+  updateCartInfo();
 </script>
 
 </body>
