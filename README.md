@@ -202,7 +202,7 @@
       name: "Organizador de Baño Esquinero",
       price: 59000,
       shortDesc: "Organiza tu baño con este estante resistente y sin necesidad de tornillos.",
-      img: "https://cdn.pixabay.com/photo/2016/03/27/21/56/shelf-1283913_1280.jpg"
+      img: "https://d39ru7awumhhs2.cloudfront.net/colombia/products/883693/1716500557imagen_2024-05-23_164213721.png"
     },
     {
       id: 3,
