@@ -15,7 +15,7 @@
       color: #000;
     }
     header {
-      background-color: #cc6600; /* naranja oscuro */
+      background-color: #ff6f00; /* naranja oscuro */
       color: #000;
       padding: 1rem;
       text-align: center;
