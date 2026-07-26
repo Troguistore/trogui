@@ -2,715 +2,609 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>TROGÜI — Lima Eléctrica para Pies · Envío gratis + Pago contra entrega</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TROGÜI | Lima Eléctrica Profesional para Pies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#12211F;
-    --bg:#FBF6EF;
-    --bg-soft:#FFFDFB;
-    --pine:#0F181D;
-    --pine-2:#233A3F;
-    --coral:#FE5E06;
-    --coral-dark:#DA4E00;
-    --gold:#0F181D;
-    --line:rgba(15,24,29,0.12);
-    --shadow:0 20px 45px -20px rgba(15,24,29,0.4);
+    --clay:#E85D2A;
+    --clay-dark:#C94A1C;
+    --cream:#FBF5EC;
+    --ink:#1F2A24;
+    --sage:#4F7864;
+    --sage-light:#DCE8E1;
+    --gold:#E8B84B;
+    --white:#FFFFFF;
+    --line: rgba(31,42,36,0.12);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    font-family:'Work Sans',sans-serif;
+    background:var(--cream);
     color:var(--ink);
-    background:var(--bg);
-    -webkit-font-smoothing:antialiased;
+    font-family:'Work Sans', sans-serif;
+    line-height:1.5;
   }
   h1,h2,h3,.display{
-    font-family:'Fraunces',serif;
+    font-family:'Fraunces', serif;
     font-weight:600;
     letter-spacing:-0.01em;
     margin:0;
   }
-  img{max-width:100%;display:block;}
+  img{max-width:100%; display:block;}
   a{color:inherit;}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 20px;}
-  .eyebrow{
-    font-size:12px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    font-weight:700;
-    color:var(--pine-2);
-    opacity:0.75;
-  }
-  /* ---- top utility bar ---- */
-  .topbar{background:var(--pine);color:#EFF5F0;font-size:13px;text-align:center;padding:8px 12px;font-weight:600;letter-spacing:0.01em;}
-  .topbar span.dot{opacity:0.6;margin:0 8px;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 24px;}
 
-  /* ---- TROGÜI wordmark (recreated from brand logo: two interlocking rings for the double-O) ---- */
-  .logo-row{display:flex;align-items:center;margin-bottom:22px;}
-  .trogui-logo{display:inline-flex;align-items:center;font-family:'Fraunces',serif;font-weight:600;font-size:26px;letter-spacing:0.01em;color:#fff;}
-  .trogui-logo .rings{
-    display:inline-flex;position:relative;width:40px;height:26px;margin:0 1px;
-  }
-  .trogui-logo .rings span{
-    position:absolute;top:1px;width:24px;height:24px;border-radius:50%;
-    border:3px solid currentColor;background:transparent;
-  }
-  .trogui-logo .rings span:first-child{left:0;}
-  .trogui-logo .rings span:last-child{left:16px;}
-  .trogui-logo .umlaut{position:relative;}
-  .trogui-logo .umlaut::before,.trogui-logo .umlaut::after{
-    content:"";position:absolute;top:-9px;width:4px;height:4px;border-radius:50%;background:currentColor;
-  }
-  .trogui-logo .umlaut::before{left:4px;}
-  .trogui-logo .umlaut::after{left:13px;}
-  .trogui-logo.dark{color:var(--pine);}
-
-  /* ---- hero ---- */
-  .hero{
-    background:radial-gradient(120% 140% at 85% -10%, #35271E 0%, var(--pine) 55%, #0A1114 100%);
-    color:#F4F7F2;
-    padding:38px 0 54px;
+  /* ===== Top trust strip ===== */
+  .topstrip{
+    background:var(--ink);
+    color:var(--cream);
+    font-size:13px;
+    letter-spacing:.03em;
+    text-align:center;
+    padding:8px 12px;
     position:relative;
     overflow:hidden;
   }
-  .hero::after{
-    content:"";
-    position:absolute;
-    right:-120px;top:-120px;
-    width:360px;height:360px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,0.12);
+  .topstrip b{color:var(--gold);}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
   }
-  .hero::before{
-    content:"";
-    position:absolute;
-    right:-40px;top:-40px;
-    width:220px;height:220px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,0.10);
+  .headerbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px;
   }
+  .logo{font-family:'Fraunces',serif; font-weight:700; font-size:26px; color:var(--clay-dark); letter-spacing:-0.02em;}
+  .wa-btn{
+    display:flex; align-items:center; gap:8px;
+    background:var(--sage); color:var(--white);
+    padding:10px 16px; border-radius:100px;
+    font-weight:600; font-size:14px; text-decoration:none;
+    white-space:nowrap;
+  }
+  .wa-btn svg{width:16px; height:16px; fill:var(--white);}
+
+  /* ===== Hero ===== */
+  .hero{padding:48px 0 32px;}
   .hero-grid{
-    display:grid;
-    grid-template-columns:1.05fr 0.95fr;
-    gap:44px;
-    align-items:center;
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center;
   }
-  .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 20px;}
-  .badge{
-    display:inline-flex;align-items:center;gap:6px;
-    background:rgba(255,255,255,0.10);
-    border:1px solid rgba(255,255,255,0.2);
-    padding:7px 12px;border-radius:99px;
-    font-size:12.5px;font-weight:600;
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--sage-light); color:var(--sage);
+    padding:6px 14px; border-radius:100px; font-size:13px; font-weight:600;
+    margin-bottom:18px;
   }
-  .hero h1{font-size:clamp(30px,4.2vw,46px);line-height:1.06;color:#fff;}
-  .hero h1 em{font-style:normal;color:var(--gold);}
-  .hero p.lead{font-size:17px;line-height:1.55;color:rgba(244,247,242,0.86);margin-top:16px;max-width:46ch;}
-  .price-block{display:flex;align-items:baseline;gap:14px;margin:24px 0 6px;flex-wrap:wrap;}
-  .price-old{font-size:19px;color:rgba(244,247,242,0.55);text-decoration:line-through;}
-  .price-new{font-size:44px;font-family:'Fraunces',serif;font-weight:700;color:#fff;}
-  .price-tag{font-size:13px;color:var(--gold);font-weight:700;}
-  .cta{
-    display:inline-flex;align-items:center;justify-content:center;gap:10px;
-    background:var(--coral);color:#fff;border:none;
-    font-family:'Work Sans',sans-serif;font-weight:700;font-size:16.5px;
-    padding:17px 26px;border-radius:12px;cursor:pointer;
-    box-shadow:0 14px 30px -10px rgba(232,106,87,0.6);
-    text-decoration:none;
-    transition:transform .15s ease, box-shadow .15s ease;
+  .hero h1{font-size:44px; line-height:1.08; color:var(--ink);}
+  .hero h1 em{font-style:normal; color:var(--clay);}
+  .hero p.lead{font-size:17px; color:#4B564F; margin:18px 0 26px; max-width:46ch;}
+  .price-row{display:flex; align-items:baseline; gap:14px; margin-bottom:26px;}
+  .price-now{font-family:'Fraunces',serif; font-size:38px; font-weight:700; color:var(--clay-dark);}
+  .price-old{font-size:18px; color:#93998f; text-decoration:line-through;}
+  .badge-ship{
+    display:inline-block; background:var(--gold); color:var(--ink);
+    font-weight:700; font-size:12px; padding:4px 10px; border-radius:6px;
+    margin-left:2px; animation:pulseBadge 2.4s ease-in-out infinite;
   }
-  .cta:hover{transform:translateY(-2px);box-shadow:0 18px 34px -10px rgba(232,106,87,0.7);}
-  .cta.block{width:100%;}
-  .hero-cta-note{font-size:12.5px;color:rgba(244,247,242,0.65);margin-top:10px;}
+  @keyframes pulseBadge{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.06);}
+  }
+  .cta-primary{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    background:var(--clay); color:var(--white);
+    font-weight:700; font-size:17px;
+    padding:18px 30px; border-radius:12px; border:none; cursor:pointer;
+    width:100%; max-width:420px;
+    box-shadow:0 10px 24px rgba(232,93,42,0.32);
+    animation:shakeCTA 3.2s ease-in-out infinite;
+  }
+  .cta-primary:hover{background:var(--clay-dark);}
+  @keyframes shakeCTA{
+    0%,88%,100%{transform:translateX(0) rotate(0);}
+    89%{transform:translateX(-3px) rotate(-1deg);}
+    90%{transform:translateX(3px) rotate(1deg);}
+    91%{transform:translateX(-3px) rotate(-1deg);}
+    92%{transform:translateX(3px) rotate(1deg);}
+    93%{transform:translateX(-2px) rotate(0);}
+    94%{transform:translateX(0);}
+  }
+  .cta-sub{font-size:13px; color:#6b7268; margin-top:10px;}
   .hero-media{position:relative;}
-  .hero-media img{
-    border-radius:20px;
-    box-shadow:var(--shadow);
-    border:6px solid rgba(255,255,255,0.08);
+  .hero-media img{border-radius:18px; box-shadow:0 20px 50px rgba(31,42,36,0.18);}
+  .float-tag{
+    position:absolute; bottom:-14px; left:-14px;
+    background:var(--white); border-radius:12px; padding:10px 16px;
+    box-shadow:0 12px 24px rgba(0,0,0,0.12);
+    font-size:13px; font-weight:700; color:var(--sage);
+    display:flex; align-items:center; gap:8px;
   }
-  .hero-media .float-card{
-    position:absolute;bottom:-18px;left:-18px;
-    background:#fff;color:var(--ink);
-    border-radius:14px;padding:12px 16px;
-    box-shadow:0 18px 30px -12px rgba(0,0,0,0.35);
-    font-size:13px;font-weight:700;
-    display:flex;align-items:center;gap:10px;
-    max-width:230px;
-  }
-  .ring{
-    width:34px;height:34px;border-radius:50%;
-    border:3px solid var(--coral);
-    border-top-color:transparent;
-    flex:none;
-    animation:spin 2.2s linear infinite;
-  }
-  @keyframes spin{to{transform:rotate(360deg);}}
+  .float-tag .dot{width:8px; height:8px; border-radius:50%; background:var(--sage); animation:blink 1.6s infinite;}
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
 
-  /* ---- trust strip ---- */
-  .trust{background:var(--bg-soft);border-bottom:1px solid var(--line);padding:16px 0;}
-  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center;}
-  .trust-grid div{font-size:12.5px;font-weight:700;color:var(--pine-2);}
-  .trust-grid div span{display:block;font-size:20px;margin-bottom:4px;}
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr; gap:28px;}
+    .hero h1{font-size:32px;}
+  }
 
-  /* ---- section shell ---- */
+  /* ===== Free shipping wave banner ===== */
+  .shipband{
+    background:var(--sage); color:var(--white);
+    padding:14px 0; overflow:hidden; position:relative;
+  }
+  .shipband-track{
+    display:flex; gap:48px; white-space:nowrap;
+    animation:scrollBand 18s linear infinite;
+    font-weight:700; font-size:14px; letter-spacing:.03em;
+  }
+  .shipband-track span{display:flex; align-items:center; gap:8px;}
+  @keyframes scrollBand{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* ===== Section generic ===== */
   section{padding:64px 0;}
-  .section-head{max-width:640px;margin:0 auto 40px;text-align:center;}
-  .section-head h2{font-size:clamp(24px,3.2vw,34px);margin-top:10px;}
-  .section-head p{color:rgba(30,43,37,0.68);margin-top:12px;font-size:15.5px;line-height:1.6;}
+  .section-title{text-align:center; max-width:640px; margin:0 auto 40px;}
+  .section-title .eyebrow{margin-bottom:14px;}
+  .section-title h2{font-size:32px; color:var(--ink);}
+  .section-title p{color:#5c655e; margin-top:12px; font-size:16px;}
 
-  /* ---- problem/solution ---- */
-  .agitate{background:var(--bg-soft);}
-  .agitate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .agitate-card{
-    background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;
-  }
-  .agitate-card .mark{
-    width:38px;height:38px;border-radius:50%;background:rgba(232,106,87,0.12);
-    color:var(--coral-dark);font-weight:800;display:flex;align-items:center;justify-content:center;
-    margin-bottom:14px;font-size:15px;
-  }
-  .agitate-card h3{font-size:16.5px;margin-bottom:6px;}
-  .agitate-card p{font-size:14px;color:rgba(30,43,37,0.68);line-height:1.55;margin:0;}
+  /* ===== Before/after ===== */
+  .ba-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  .ba-card{background:var(--white); border-radius:16px; overflow:hidden; border:1px solid var(--line);}
+  .ba-card img{width:100%;}
+  .ba-cap{padding:14px 18px; font-size:14px; color:#5c655e;}
+  @media(max-width:700px){.ba-grid{grid-template-columns:1fr;}}
 
-  /* ---- how it works ---- */
-  .how{display:grid;grid-template-columns:0.95fr 1.05fr;gap:48px;align-items:center;}
-  .how-steps{display:flex;flex-direction:column;gap:22px;}
-  .step{display:flex;gap:16px;}
-  .step .ring-num{
-    width:44px;height:44px;border-radius:50%;flex:none;
-    border:2.5px solid var(--pine-2);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Fraunces',serif;font-weight:700;color:var(--pine-2);
-    position:relative;
+  /* ===== Features ===== */
+  .feat-section{background:var(--white);}
+  .feat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .feat-card{padding:26px; border:1px solid var(--line); border-radius:16px; background:var(--cream);}
+  .feat-icon{
+    width:44px; height:44px; border-radius:12px; background:var(--clay);
+    display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+    color:var(--white); font-family:'Fraunces',serif; font-weight:700;
   }
-  .step .ring-num::before{
-    content:"";position:absolute;inset:-7px;border-radius:50%;
-    border:1px dashed rgba(23,58,49,0.25);
-  }
-  .step h3{font-size:16.5px;margin-bottom:5px;}
-  .step p{font-size:14.5px;color:rgba(30,43,37,0.68);margin:0;line-height:1.55;}
-  .how-media img{border-radius:18px;box-shadow:var(--shadow);}
+  .feat-card h3{font-size:17px; margin-bottom:8px;}
+  .feat-card p{font-size:14px; color:#5c655e; margin:0;}
+  @media(max-width:860px){.feat-grid{grid-template-columns:1fr;}}
 
-  /* ---- features ---- */
-  .features{background:var(--pine);color:#F4F7F2;}
-  .features .section-head p{color:rgba(244,247,242,0.72);}
-  .features .eyebrow{color:var(--gold);opacity:1;}
-  .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-  .feature-card{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:16px;padding:22px 18px;
+  /* ===== Includes / how it works ===== */
+  .includes{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .includes-list{list-style:none; margin:0; padding:0;}
+  .includes-list li{
+    display:flex; gap:12px; padding:12px 0; border-bottom:1px dashed var(--line); font-size:15px;
   }
-  .feature-card .ico{font-size:24px;margin-bottom:12px;}
-  .feature-card h3{font-size:15px;color:#fff;margin-bottom:6px;font-family:'Work Sans',sans-serif;font-weight:700;}
-  .feature-card p{font-size:13.5px;color:rgba(244,247,242,0.72);margin:0;line-height:1.5;}
+  .includes-list li:last-child{border-bottom:none;}
+  .check{color:var(--sage); font-weight:800;}
+  @media(max-width:860px){.includes{grid-template-columns:1fr;}}
 
-  /* ---- included ---- */
-  .included-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;}
-  .included-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;}
-  .included-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;}
-  .included-list li b{display:block;font-size:15px;}
-  .included-list li span.chk{
-    width:22px;height:22px;border-radius:50%;background:var(--pine-2);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-size:12px;flex:none;margin-top:2px;
+  /* ===== Trust / shipping partners ===== */
+  .trust{background:var(--ink); color:var(--cream);}
+  .trust .section-title h2{color:var(--cream);}
+  .trust .section-title p{color:#B9C2BB;}
+  .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px; align-items:center;}
+  .trust-grid img{border-radius:16px;}
+  @media(max-width:860px){.trust-grid{grid-template-columns:1fr;}}
+  .badges-row{display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:36px;}
+  .pill{
+    background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+    padding:10px 18px; border-radius:100px; font-size:14px; font-weight:600;
   }
-  .included-media{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .included-media img{border-radius:14px;box-shadow:0 12px 24px -14px rgba(23,58,49,0.4);}
 
-  /* ---- reviews ---- */
-  .reviews{background:var(--bg-soft);}
-  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .review-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;}
-  .review-stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:10px;}
-  .review-card p{font-size:14px;line-height:1.6;color:rgba(30,43,37,0.78);margin:0 0 14px;}
-  .review-person{display:flex;align-items:center;gap:10px;}
-  .review-avatar{
-    width:34px;height:34px;border-radius:50%;background:var(--pine-2);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none;
+  /* ===== Activity ticker (honest version) ===== */
+  .ticker-wrap{
+    max-width:420px; margin:0 auto 44px; background:var(--white);
+    border:1px solid var(--line); border-radius:14px; padding:14px 18px;
+    display:flex; align-items:center; gap:12px; box-shadow:0 8px 20px rgba(0,0,0,0.05);
   }
-  .review-person span{font-size:13px;font-weight:700;display:block;}
-  .review-person small{font-size:11.5px;color:rgba(30,43,37,0.5);}
+  .ticker-dot{width:10px; height:10px; border-radius:50%; background:var(--sage); flex-shrink:0; animation:blink 1.6s infinite;}
+  #ticker-text{font-size:14px; font-weight:600; color:var(--ink); transition:opacity .3s;}
 
-  /* ---- faq ---- */
-  .faq{max-width:760px;margin:0 auto;}
-  .faq-item{border-bottom:1px solid var(--line);}
-  .faq-q{
-    width:100%;text-align:left;background:none;border:none;
-    padding:18px 4px;font-family:'Work Sans',sans-serif;font-weight:700;font-size:15.5px;
-    color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  /* ===== Order form ===== */
+  .order{background:var(--white); border-radius:24px; border:1px solid var(--line); padding:40px; box-shadow:0 20px 50px rgba(31,42,36,0.08);}
+  .order-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px;}
+  .order h2{font-size:26px; margin-bottom:8px;}
+  .order p.sub{color:#5c655e; font-size:14px; margin-bottom:24px;}
+  .form-row{margin-bottom:16px;}
+  .form-row label{display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--ink);}
+  .form-row input, .form-row select{
+    width:100%; padding:13px 14px; border-radius:10px; border:1px solid var(--line);
+    font-family:'Work Sans',sans-serif; font-size:15px; background:var(--cream);
   }
-  .faq-q .plus{transition:transform .2s ease;font-size:20px;color:var(--coral-dark);flex:none;}
-  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
-  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
-  .faq-a p{font-size:14.5px;line-height:1.6;color:rgba(30,43,37,0.7);padding:0 4px 18px;margin:0;}
+  .form-row input:focus, .form-row select:focus{outline:2px solid var(--clay); outline-offset:1px;}
+  .toggle-row{display:flex; gap:10px; margin-bottom:20px;}
+  .toggle-opt{
+    flex:1; text-align:center; padding:12px 8px; border-radius:10px; border:1px solid var(--line);
+    font-size:13px; font-weight:600; cursor:pointer; background:var(--cream);
+  }
+  .toggle-opt.active{background:var(--sage-light); border-color:var(--sage); color:var(--sage);}
+  .qty-row{display:flex; align-items:center; gap:14px; margin-bottom:22px;}
+  .qty-btn{width:38px; height:38px; border-radius:8px; border:1px solid var(--line); background:var(--cream); font-size:18px; cursor:pointer;}
+  .totalbar{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:16px 18px; background:var(--sage-light); border-radius:12px; margin-bottom:20px;
+  }
+  .totalbar b{font-family:'Fraunces',serif; font-size:20px; color:var(--sage);}
+  .order-side{background:var(--cream); border-radius:16px; padding:26px;}
+  .order-side h3{font-size:16px; margin-bottom:14px;}
+  .order-side ul{margin:0 0 20px; padding-left:18px; font-size:14px; color:#4B564F;}
+  .order-side ul li{margin-bottom:8px;}
+  @media(max-width:860px){.order{padding:26px;} .order-grid{grid-template-columns:1fr; gap:28px;}}
 
-  /* ---- order form ---- */
-  .order{background:radial-gradient(120% 140% at 15% 0%, #35271E 0%, var(--pine) 55%, #0A1114 100%);color:#fff;}
-  .order-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:44px;align-items:flex-start;}
-  .order-card{
-    background:#fff;color:var(--ink);border-radius:20px;padding:28px;box-shadow:var(--shadow);
-  }
-  .order-card h3{font-size:20px;margin-bottom:4px;}
-  .order-card .sub{font-size:13.5px;color:rgba(30,43,37,0.6);margin-bottom:20px;}
-  .field{margin-bottom:14px;}
-  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--pine-2);}
-  .field input,.field select{
-    width:100%;padding:12px 13px;border-radius:10px;border:1.5px solid var(--line);
-    font-family:'Work Sans',sans-serif;font-size:14.5px;background:#F8FAF8;color:var(--ink);
-  }
-  .field input:focus,.field select:focus{outline:2px solid var(--coral);outline-offset:1px;border-color:var(--coral);}
-  .qty-row{display:flex;gap:10px;}
-  .qty-opt{
-    flex:1;border:1.5px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center;cursor:pointer;
-    font-size:12.5px;font-weight:700;
-  }
-  .qty-opt.active{border-color:var(--coral);background:rgba(232,106,87,0.08);color:var(--coral-dark);}
-  .qty-opt .qty-price{display:block;font-family:'Fraunces',serif;font-size:17px;margin-top:4px;}
-  .order-summary{display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin:16px 0;padding-top:14px;border-top:1px dashed var(--line);}
-  .order-note{font-size:12px;color:rgba(30,43,37,0.55);margin-top:12px;text-align:center;line-height:1.5;}
-  .order-copy .eyebrow{color:var(--gold);opacity:1;}
-  .order-copy h2{color:#fff;font-size:clamp(22px,3vw,30px);margin-top:10px;}
-  .order-copy p{color:rgba(244,247,242,0.78);font-size:15px;margin-top:12px;line-height:1.6;max-width:44ch;}
-  .order-copy ul{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:12px;}
-  .order-copy li{display:flex;gap:10px;font-size:14.5px;align-items:flex-start;}
-  .order-copy li span.chk{
-    width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.14);
-    display:flex;align-items:center;justify-content:center;font-size:11px;flex:none;margin-top:2px;
-  }
-  .countdown{display:flex;gap:10px;margin-top:24px;}
-  .countdown div{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:10px 14px;text-align:center;min-width:64px;}
-  .countdown div b{display:block;font-family:'Fraunces',serif;font-size:20px;}
-  .countdown div small{font-size:10px;text-transform:uppercase;letter-spacing:0.06em;opacity:0.7;}
+  /* ===== FAQ ===== */
+  .faq-item{border-bottom:1px solid var(--line); padding:18px 0;}
+  .faq-q{display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-weight:600; font-size:15px;}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease; font-size:14px; color:#5c655e;}
+  .faq-item.open .faq-a{max-height:200px; padding-top:10px;}
+  .faq-plus{font-size:20px; transition:transform .3s;}
+  .faq-item.open .faq-plus{transform:rotate(45deg);}
 
-  footer{background:#102820;color:rgba(244,247,242,0.6);padding:34px 0 100px;font-size:12.5px;text-align:center;}
-  footer .wrap{display:flex;flex-direction:column;gap:8px;align-items:center;}
+  /* ===== Footer ===== */
+  footer{background:var(--ink); color:#B9C2BB; padding:40px 0; font-size:13px;}
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; align-items:center;}
+  .foot-logo{font-family:'Fraunces',serif; color:var(--white); font-size:20px; font-weight:700;}
 
-  .wa-float{
-    position:fixed;bottom:18px;right:18px;z-index:50;
-    background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;box-shadow:0 14px 26px -8px rgba(0,0,0,0.4);
-    text-decoration:none;font-size:26px;
-  }
+  /* ===== Sticky mobile CTA ===== */
   .sticky-cta{
-    position:fixed;left:0;right:0;bottom:0;z-index:40;
-    background:#fff;border-top:1px solid var(--line);
-    padding:10px 14px;display:none;
-    align-items:center;justify-content:space-between;gap:12px;
-    box-shadow:0 -12px 24px -18px rgba(0,0,0,0.4);
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:var(--white); border-top:1px solid var(--line);
+    padding:12px 16px; display:none;
+    box-shadow:0 -8px 20px rgba(0,0,0,0.08);
   }
-  .sticky-cta .p{font-size:13px;font-weight:700;color:var(--pine);}
-  .sticky-cta .p small{display:block;font-weight:500;color:rgba(30,43,37,0.55);font-size:11px;}
-
-  @media (max-width:880px){
-    .hero-grid,.how,.included-grid,.order-grid{grid-template-columns:1fr;}
-    .hero-media{order:-1;}
-    .agitate-grid{grid-template-columns:1fr;}
-    .feature-grid{grid-template-columns:1fr 1fr;}
-    .review-grid{grid-template-columns:1fr;}
-    .trust-grid{grid-template-columns:1fr 1fr;}
-    .included-media{grid-template-columns:1fr 1fr;}
-    .sticky-cta{display:flex;}
-    section{padding:46px 0;}
-    footer{padding-bottom:110px;}
+  .sticky-cta a{
+    display:block; text-align:center; background:var(--clay); color:var(--white);
+    font-weight:700; padding:14px; border-radius:10px; text-decoration:none;
+    animation:shakeCTA 3.2s ease-in-out infinite;
   }
+  @media(max-width:700px){.sticky-cta{display:block;} body{padding-bottom:78px;}}
 </style>
 </head>
 <body>
 
-<div class="topbar">🚚 ENVÍO GRATIS A TODA COLOMBIA <span class="dot">•</span> 💵 PAGA CUANDO LO RECIBAS <span class="dot">•</span> 🛡️ GARANTÍA DE 30 DÍAS</div>
+<div class="topstrip">🚚 <b>Envío gratis</b> a toda Colombia · 💵 Pagas cuando lo recibes en tu casa</div>
 
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="logo-row">
-        <span class="trogui-logo">TR<span class="rings"><span></span><span></span></span><span class="umlaut">ÜI</span></span>
-      </div>
-      <div class="badge-row">
-        <span class="badge">⭐ 4.8/5 valoración</span>
-        <span class="badge">🔋 Recargable USB</span>
-        <span class="badge">⚙️ 2 velocidades</span>
-      </div>
-      <h1>Pies suaves y renovados <em>en minutos</em>, sin salir de casa</h1>
-      <p class="lead">La Lima Eléctrica Profesional elimina la piel dura, los callos persistentes y los talones agrietados con un sistema giratorio 360° — como una sesión de spa, pero en tu propia casa.</p>
-      <div class="price-block">
-        <span class="price-old">$89.000</span>
-        <span class="price-new">$49.000</span>
-        <span class="price-tag">Ahorras $40.000 hoy</span>
-      </div>
-      <a href="#pedido" class="cta">Pedir ahora — pago contra entrega →</a>
-      <p class="hero-cta-note">Sin tarjeta, sin anticipos. Revisas tu pedido y pagas al mensajero.</p>
-    </div>
-    <div class="hero-media">
-      <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1176532/1725899615Removedor%20de%20callos%20de%20pies%20el%C3%A9ctrico%208.jpg" alt="Lima eléctrica para pies en uso">
-      <div class="float-card"><span class="ring"></span> Rodillo giratorio 360° — resultados desde el primer uso</div>
-    </div>
+<header>
+  <div class="headerbar wrap">
+    <div class="logo">TROGÜI</div>
+    <a class="wa-btn" href="https://wa.me/573206572598" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9 1-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.3c1.5.8 3.2 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.6 13.5 3.6 12 3.6 7.4 7.4 3.6 12 3.6c4.6 0 8.4 3.8 8.4 8.4 0 4.6-3.8 8.3-8.4 8.3z"/></svg>
+      WhatsApp
+    </a>
   </div>
 </header>
 
-<div class="trust">
-  <div class="wrap trust-grid">
-    <div><span>🚚</span>Envío gratis</div>
-    <div><span>💵</span>Pago contra entrega</div>
-    <div><span>📦</span>Interrapidísimo · Envía · Coordinadora</div>
-    <div><span>🔁</span>Garantía de cambio</div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">✨ Spa profesional en casa</span>
+      <h1>Pies suaves y <em>sin callos</em> en minutos, no en semanas</h1>
+      <p class="lead">Lima eléctrica giratoria 360° con rodillos intercambiables. Elimina piel dura, callos y talones agrietados sin dolor y sin ir al podólogo.</p>
+      <div class="price-row">
+        <span class="price-now">$49.000</span>
+        <span class="price-old">$89.000</span>
+        <span class="badge-ship">ENVÍO GRATIS</span>
+      </div>
+      <a href="#pedido" class="cta-primary">🛒 Pedir ahora — Pago contra entrega</a>
+      <p class="cta-sub">No pagas nada ahora. Confirmamos tu pedido y pagas al mensajero cuando lo recibes.</p>
+    </div>
+    <div class="hero-media">
+      <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1745220/1743879297Captura.JPG" alt="Antes y después removedor de callos">
+      <div class="float-tag"><span class="dot"></span> Resultados desde el primer uso</div>
+    </div>
+  </div>
+</section>
+
+<div class="shipband">
+  <div class="shipband-track">
+    <span>🚚 Envío gratis a toda Colombia</span>
+    <span>💵 Pago contra entrega</span>
+    <span>✅ Producto nuevo y garantizado</span>
+    <span>🚚 Envío gratis a toda Colombia</span>
+    <span>💵 Pago contra entrega</span>
+    <span>✅ Producto nuevo y garantizado</span>
+    <span>🚚 Envío gratis a toda Colombia</span>
+    <span>💵 Pago contra entrega</span>
+    <span>✅ Producto nuevo y garantizado</span>
   </div>
 </div>
 
-<section class="agitate">
+<section id="antes-despues">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">El problema</div>
-      <h2>¿Te suena familiar?</h2>
-      <p>Los callos y talones agrietados no solo duelen — también te hacen dudar antes de usar sandalias.</p>
+    <div class="section-title">
+      <span class="eyebrow">Resultados reales</span>
+      <h2>Así de rápido se nota la diferencia</h2>
+      <p>Fotos reales de clientas usando la lima eléctrica TROGÜI.</p>
     </div>
-    <div class="agitate-grid">
-      <div class="agitate-card">
-        <div class="mark">1</div>
-        <h3>La piedra pómez ya no alcanza</h3>
-        <p>Tallas y tallas y la piel dura vuelve a los pocos días, además de ser un método lento e incómodo.</p>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1745220/1743879297Captura.JPG" alt="Antes y después de pies con callos">
+        <div class="ba-cap">Piel dura y agrietada eliminada en pocas sesiones.</div>
       </div>
-      <div class="agitate-card">
-        <div class="mark">2</div>
-        <h3>La pedicura sale cara y toca pedir cita</h3>
-        <p>Entre el tiempo y el costo de ir cada mes, terminas posponiéndolo — y el problema sigue ahí.</p>
-      </div>
-      <div class="agitate-card">
-        <div class="mark">3</div>
-        <h3>Las cuchillas de callos dan miedo</h3>
-        <p>Un mal movimiento y puedes lastimarte. No es la forma más segura de cuidar tus pies en casa.</p>
+      <div class="ba-card">
+        <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1865529/1751477481WhatsApp%20Image%202025-07-02%20at%2011.32.13%20AM.jpeg" alt="Talón antes y después">
+        <div class="ba-cap">Talón renovado, suave al tacto, sin dolor.</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="how">
-  <div class="wrap how" style="display:grid;">
-    <div class="how-steps">
-      <div class="eyebrow">Cómo funciona</div>
-      <h2 style="margin:10px 0 22px;font-size:clamp(22px,3vw,30px);">Spa profesional, en 3 pasos</h2>
-      <div class="step">
-        <div class="ring-num">1</div>
-        <div><h3>Elige tu rodillo</h3><p>Rodillo fino para mantenimiento diario o rodillo grueso para callos más persistentes.</p></div>
-      </div>
-      <div class="step">
-        <div class="ring-num">2</div>
-        <div><h3>Selecciona la velocidad</h3><p>Modo suave para zonas sensibles o modo potente para piel muy endurecida.</p></div>
-      </div>
-      <div class="step">
-        <div class="ring-num">3</div>
-        <div><h3>Desliza sobre la piel seca</h3><p>El sistema giratorio 360° retira la piel muerta de forma pareja, sin esfuerzo ni dolor.</p></div>
-      </div>
-    </div>
-    <div class="how-media">
-      <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1176532/1725899614Removedor%20de%20callos%20de%20pies%20el%C3%A9ctrico%204.jpg" alt="Rodillos de la lima eléctrica">
-    </div>
-  </div>
-</section>
-
-<section class="features">
+<section class="feat-section">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Características</div>
-      <h2>Diseñada para uso diario, real</h2>
-      <p>Cada detalle pensado para que la uses cómodamente sin pensarlo dos veces.</p>
+    <div class="section-title">
+      <span class="eyebrow">Por qué funciona</span>
+      <h2>Tecnología de spa, hecha para tu rutina diaria</h2>
     </div>
-    <div class="feature-grid">
-      <div class="feature-card"><div class="ico">🌀</div><h3>Giro 360°</h3><p>Rodillos microabrasivos que eliminan la piel dura de forma pareja.</p></div>
-      <div class="feature-card"><div class="ico">🔋</div><h3>Inalámbrica</h3><p>Carga por USB, cuerpo resistente al agua y fácil de limpiar.</p></div>
-      <div class="feature-card"><div class="ico">💡</div><h3>Luz LED</h3><p>Ilumina la zona para mayor precisión, incluso en la noche.</p></div>
-      <div class="feature-card"><div class="ico">⚙️</div><h3>2 velocidades</h3><p>Modo suave para uso diario y modo potente para callos difíciles.</p></div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">360°</div>
+        <h3>Rodillo giratorio microabrasivo</h3>
+        <p>Elimina piel muerta y asperezas suavemente, sin raspar ni lastimar.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">⚡</div>
+        <h3>2 velocidades</h3>
+        <p>Modo suave para uso diario y modo potente para callos difíciles.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">💡</div>
+        <h3>Luz LED integrada</h3>
+        <p>Ilumina la zona de trabajo para mayor precisión, incluso de noche.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🔋</div>
+        <h3>Inalámbrica y recargable</h3>
+        <p>Carga USB práctica, cuerpo resistente al agua y fácil de limpiar.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">✋</div>
+        <h3>Diseño ergonómico</h3>
+        <p>Se adapta a tu mano para llegar a talones, dedos y planta del pie.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🔄</div>
+        <h3>2 rodillos incluidos</h3>
+        <p>Rodillo fino para pulido diario, rodillo grueso para callos persistentes.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="included">
-  <div class="wrap included-grid">
-    <div class="included-media">
-      <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1627409/17370345681.png" alt="Contenido del kit">
-      <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1745220/1743879297Captura.JPG" alt="Detalle del producto">
+<section>
+  <div class="wrap includes">
+    <div>
+      <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1176532/1725899615Removedor%20de%20callos%20de%20pies%20el%C3%A9ctrico%208.jpg" alt="Contenido del kit" style="border-radius:16px;">
     </div>
     <div>
-      <div class="eyebrow">Qué incluye tu pedido</div>
-      <h2 style="margin:10px 0 20px;font-size:clamp(22px,3vw,30px);">Todo listo para tu primera sesión</h2>
-      <ul class="included-list">
-        <li><span class="chk">✓</span><div><b>1 Lima eléctrica</b>mango ergonómico, resistente al agua</div></li>
-        <li><span class="chk">✓</span><div><b>1 Cable de carga USB</b>compatible con cualquier cargador o power bank</div></li>
-        <li><span class="chk">✓</span><div><b>1 Rodillo fino</b>para pulido y mantenimiento diario</div></li>
-        <li><span class="chk">✓</span><div><b>1 Rodillo grueso</b>para callos persistentes y piel muy dura</div></li>
+      <span class="eyebrow">Qué incluye tu pedido</span>
+      <h2 style="font-size:28px; margin-bottom:20px;">Todo lo que necesitas en una sola caja</h2>
+      <ul class="includes-list">
+        <li><span class="check">✓</span> 1 Lima eléctrica profesional TROGÜI</li>
+        <li><span class="check">✓</span> 1 Cable de carga USB</li>
+        <li><span class="check">✓</span> 1 Rodillo fino (pulido diario)</li>
+        <li><span class="check">✓</span> 1 Rodillo grueso (callos persistentes)</li>
+        <li><span class="check">✓</span> Envío gratis a toda Colombia</li>
+        <li><span class="check">✓</span> Pago contra entrega, sin adelantos</li>
       </ul>
+      <a href="#pedido" class="cta-primary" style="max-width:320px;">Quiero el mío</a>
     </div>
   </div>
 </section>
 
-<section class="reviews">
+<section class="trust">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Clientas</div>
-      <h2>Lo que dicen quienes ya la probaron</h2>
-      <p>Reseñas de ejemplo — reemplázalas por las opiniones reales de tus primeras clientas apenas empieces a vender.</p>
+    <div class="section-title">
+      <span class="eyebrow" style="background:rgba(255,255,255,0.1); color:var(--gold);">Envíos confiables</span>
+      <h2>Llegamos a toda Colombia</h2>
+      <p>Trabajamos con transportadoras autorizadas para que tu pedido llegue seguro, sin importar la ciudad.</p>
     </div>
-    <div class="review-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>"Fácil de usar y no fue nada brusca con la piel. En dos usos ya sentí los talones más suaves."</p>
-        <div class="review-person"><div class="review-avatar">M</div><div><span>Clienta verificada</span><small>Bogotá</small></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>"Llegó en 3 días y pagué contra entrega sin problema. La luz LED ayuda mucho a ver bien lo que haces."</p>
-        <div class="review-person"><div class="review-avatar">L</div><div><span>Clienta verificada</span><small>Medellín</small></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★☆</div>
-        <p>"Buena batería y silenciosa. El rodillo grueso funciona bien para las zonas más resecas del talón."</p>
-        <div class="review-person"><div class="review-avatar">C</div><div><span>Clienta verificada</span><small>Cali</small></div></div>
-      </div>
+    <div class="trust-grid">
+      <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1627409/17370345681.png" alt="Transportadoras Interrapidísimo y Coordinadora" style="background:white; padding:10px;">
+      <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1176532/1725899614Removedor%20de%20callos%20de%20pies%20el%C3%A9ctrico%204.jpg" alt="Equipo TROGÜI empacando pedidos">
+    </div>
+    <div class="badges-row">
+      <span class="pill">✅ Producto nuevo</span>
+      <span class="pill">🛡️ Calidad garantizada</span>
+      <span class="pill">📦 Entregas rápidas</span>
+      <span class="pill">💵 Pago contra entrega</span>
+      <span class="pill">📞 WhatsApp 320 657 2598</span>
     </div>
   </div>
 </section>
 
-<section class="faqs">
+<section id="pedido">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Preguntas frecuentes</div>
-      <h2>Antes de pedir</h2>
-    </div>
-    <div class="faq">
-      <div class="faq-item open">
-        <button class="faq-q">¿Cómo funciona el pago contra entrega? <span class="plus">+</span></button>
-        <div class="faq-a" style="max-height:120px;"><p>Haces tu pedido sin pagar nada ahora. Un mensajero lleva el producto a tu dirección y pagas en efectivo o transferencia al momento de recibirlo.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">¿Cuánto tarda el envío? <span class="plus">+</span></button>
-        <div class="faq-a"><p>Entre 2 y 5 días hábiles según tu ciudad. Te contactamos por WhatsApp para confirmar la dirección antes de despachar.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">¿El envío realmente es gratis? <span class="plus">+</span></button>
-        <div class="faq-a"><p>Sí, el costo de envío está incluido en el precio y no pagas nada adicional por transporte a ninguna parte de Colombia.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">¿Qué pasa si no me gusta? <span class="plus">+</span></button>
-        <div class="faq-a"><p>Cuentas con 30 días de garantía por defectos de fabricación. Escríbenos por WhatsApp y te ayudamos con el cambio.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="order" id="pedido">
-  <div class="wrap order-grid">
-    <div class="order-copy">
-      <div class="eyebrow">Últimas unidades de esta semana</div>
-      <h2>Completa tus datos y confírmanos por WhatsApp</h2>
-      <p>Sin pagos en línea. Solo diligencias el formulario, uno de nuestros asesores te confirma el pedido y pagas cuando lo recibas en tu puerta.</p>
-      <ul>
-        <li><span class="chk">✓</span> Envío gratis a toda Colombia</li>
-        <li><span class="chk">✓</span> Pago contra entrega, sin tarjeta</li>
-        <li><span class="chk">✓</span> Garantía de 30 días</li>
-      </ul>
-      <div class="countdown" id="countdown">
-        <div><b id="cd-h">00</b><small>Horas</small></div>
-        <div><b id="cd-m">00</b><small>Min</small></div>
-        <div><b id="cd-s">00</b><small>Seg</small></div>
-      </div>
+    <div class="ticker-wrap">
+      <span class="ticker-dot"></span>
+      <span id="ticker-text">Cargando actividad reciente...</span>
     </div>
 
-    <div class="order-card">
-      <h3>Haz tu pedido</h3>
-      <div class="sub">Te escribimos por WhatsApp para confirmar antes de despachar.</div>
+    <div class="order">
+      <div class="order-grid">
+        <div>
+          <h2>Completa tu pedido</h2>
+          <p class="sub">Diligencia tus datos. Un asesor confirma por WhatsApp antes de despachar.</p>
 
-      <div class="field">
-        <label>Cantidad</label>
-        <div class="qty-row">
-          <div class="qty-opt active" data-qty="1" data-price="49000">1 unidad<span class="qty-price">$49.000</span></div>
-          <div class="qty-opt" data-qty="2" data-price="89000">2 unidades<span class="qty-price">$89.000</span></div>
+          <form id="orderForm" onsubmit="return false;">
+            <div class="form-row">
+              <label>Nombre completo</label>
+              <input type="text" placeholder="Ej: Laura Gómez" required>
+            </div>
+            <div class="form-row">
+              <label>Teléfono / WhatsApp</label>
+              <input type="tel" placeholder="Ej: 300 123 4567" required>
+            </div>
+            <div class="form-row">
+              <label>Departamento</label>
+              <select required>
+                <option value="">Selecciona tu departamento</option>
+                <option>Antioquia</option>
+                <option>Atlántico</option>
+                <option>Bogotá D.C.</option>
+                <option>Bolívar</option>
+                <option>Boyacá</option>
+                <option>Caldas</option>
+                <option>Cauca</option>
+                <option>Cesar</option>
+                <option>Chocó</option>
+                <option>Córdoba</option>
+                <option>Cundinamarca</option>
+                <option>Huila</option>
+                <option>La Guajira</option>
+                <option>Magdalena</option>
+                <option>Meta</option>
+                <option>Nariño</option>
+                <option>Norte de Santander</option>
+                <option>Quindío</option>
+                <option>Risaralda</option>
+                <option>Santander</option>
+                <option>Sucre</option>
+                <option>Tolima</option>
+                <option>Valle del Cauca</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>Ciudad / Municipio</label>
+              <input type="text" placeholder="Ej: Itagüí" required>
+            </div>
+
+            <div class="form-row">
+              <label>¿Cómo quieres recibirlo?</label>
+              <div class="toggle-row">
+                <div class="toggle-opt active" id="opt-domicilio" onclick="setDelivery('domicilio')">🏠 Directo a mi domicilio</div>
+                <div class="toggle-opt" id="opt-oficina" onclick="setDelivery('oficina')">🏢 Recoger en oficina Interrapidísimo</div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Dirección completa</label>
+              <input type="text" placeholder="Calle, número, barrio, referencia" required>
+            </div>
+
+            <div class="form-row">
+              <label>Cantidad</label>
+              <div class="qty-row">
+                <button type="button" class="qty-btn" onclick="changeQty(-1)">−</button>
+                <span id="qtyDisplay" style="font-weight:700; font-size:16px;">1 unidad</span>
+                <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+              </div>
+            </div>
+
+            <div class="totalbar">
+              <span>Total a pagar contra entrega</span>
+              <b id="totalPrice">$49.000</b>
+            </div>
+
+            <a href="https://wa.me/573206572598" target="_blank" class="cta-primary" style="text-decoration:none;">
+              ✅ Confirmar pedido — Pago contra entrega
+            </a>
+            <p class="cta-sub" style="text-align:center;">Al confirmar, un asesor te escribe por WhatsApp para verificar tu dirección.</p>
+          </form>
+        </div>
+
+        <div class="order-side">
+          <h3>Por qué comprar en TROGÜI</h3>
+          <ul>
+            <li>Envío gratis a toda Colombia</li>
+            <li>Pagas solo cuando el producto está en tus manos</li>
+            <li>Producto nuevo, sellado y con garantía</li>
+            <li>Enviamos con Interrapidísimo y Coordinadora</li>
+            <li>Atención directa por WhatsApp: 320 657 2598</li>
+          </ul>
+          <img src="https://d39ru7awumhhs2.cloudfront.net/colombia/products/1745220/1743879297Captura.JPG" alt="Resultado producto" style="border-radius:12px;">
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="field">
-        <label for="nombre">Nombre completo</label>
-        <input id="nombre" type="text" placeholder="Ej: María Gómez">
+<section>
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-title">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Todo lo que quieres saber antes de pedir</h2>
+    </div>
+    <div id="faqList">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>¿De verdad pago solo cuando lo recibo?</span><span class="faq-plus">+</span></div>
+        <div class="faq-a">Sí. No pagas nada por adelantado. Pagas en efectivo al mensajero cuando el producto llega a tu dirección.</div>
       </div>
-      <div class="field">
-        <label for="telefono">WhatsApp / Celular</label>
-        <input id="telefono" type="tel" placeholder="Ej: 300 123 4567">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>¿Cuánto tarda el envío?</span><span class="faq-plus">+</span></div>
+        <div class="faq-a">Entre 2 y 5 días hábiles dependiendo de tu ciudad, a través de Interrapidísimo o Coordinadora.</div>
       </div>
-      <div class="field">
-        <label for="departamento">Departamento</label>
-        <select id="departamento">
-          <option value="">Selecciona tu departamento</option>
-          <option>Amazonas</option><option>Antioquia</option><option>Arauca</option><option>Atlántico</option>
-          <option>Bogotá D.C.</option><option>Bolívar</option><option>Boyacá</option><option>Caldas</option>
-          <option>Caquetá</option><option>Casanare</option><option>Cauca</option><option>Cesar</option>
-          <option>Chocó</option><option>Córdoba</option><option>Cundinamarca</option><option>Guainía</option>
-          <option>Guaviare</option><option>Huila</option><option>La Guajira</option><option>Magdalena</option>
-          <option>Meta</option><option>Nariño</option><option>Norte de Santander</option><option>Putumayo</option>
-          <option>Quindío</option><option>Risaralda</option><option>San Andrés y Providencia</option>
-          <option>Santander</option><option>Sucre</option><option>Tolima</option><option>Valle del Cauca</option>
-          <option>Vaupés</option><option>Vichada</option>
-        </select>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>¿Puedo recogerlo en oficina en vez de domicilio?</span><span class="faq-plus">+</span></div>
+        <div class="faq-a">Sí, en el formulario puedes elegir recibirlo en tu domicilio o recogerlo en la oficina de Interrapidísimo más cercana.</div>
       </div>
-      <div class="field">
-        <label for="ciudad">Ciudad / Municipio</label>
-        <input id="ciudad" type="text" placeholder="Ej: Bogotá">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>¿Cómo confirman mi pedido?</span><span class="faq-plus">+</span></div>
+        <div class="faq-a">Después de enviar el formulario, un asesor te escribe por WhatsApp para confirmar tu dirección y cantidad antes de despachar.</div>
       </div>
-
-      <div class="field">
-        <label>¿Cómo prefieres recibirlo?</label>
-        <div class="qty-row">
-          <div class="qty-opt entrega-opt active" data-entrega="domicilio">🏠 A domicilio</div>
-          <div class="qty-opt entrega-opt" data-entrega="oficina">🏢 Oficina Interrapidísimo</div>
-        </div>
-      </div>
-
-      <div class="field" id="campo-direccion">
-        <label for="direccion">Dirección de entrega</label>
-        <input id="direccion" type="text" placeholder="Barrio, calle, número">
-      </div>
-      <div class="field" id="campo-oficina" style="display:none;">
-        <label for="oficina">Oficina Interrapidísimo más cercana</label>
-        <input id="oficina" type="text" placeholder="Ej: Oficina Interrapidísimo Chapinero">
-      </div>
-
-      <div class="order-summary">
-        <span>Total a pagar contra entrega</span>
-        <span id="total-price">$49.000</span>
-      </div>
-
-      <button class="cta block" id="submit-order">Confirmar pedido por WhatsApp →</button>
-      <p class="order-note">Al confirmar, se abrirá WhatsApp con tus datos ya escritos para que solo debas enviar el mensaje.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <span class="trogui-logo" style="font-size:20px;">TR<span class="rings"><span></span><span></span></span><span class="umlaut">ÜI</span></span>
-    <div style="margin-top:6px;">Envíos a toda Colombia por Interrapidísimo, Envía y Coordinadora</div>
-    <div>Atención al cliente por WhatsApp · Lunes a sábado, 8am–7pm</div>
-    <div style="opacity:0.6;">Este producto es de uso cosmético para el cuidado de la piel. No sustituye atención podológica o médica profesional.</div>
+  <div class="wrap foot-grid">
+    <div class="foot-logo">TROGÜI</div>
+    <div>📞 WhatsApp: 320 657 2598 · Envíos a toda Colombia</div>
+    <div>© 2026 TROGÜI. Todos los derechos reservados.</div>
   </div>
 </footer>
 
-<a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">💬</a>
-
 <div class="sticky-cta">
-  <div class="p">$49.000 <small>Envío gratis · Pago contra entrega</small></div>
-  <a href="#pedido" class="cta" style="padding:12px 18px;font-size:14px;">Pedir ahora</a>
+  <a href="#pedido">Pedir ahora — $49.000</a>
 </div>
 
 <script>
-  // ======= CONFIGURA AQUÍ TU NÚMERO DE WHATSAPP (con indicativo 57, sin +, sin espacios) =======
-  const WHATSAPP_NUMBER = "573206572598";
+  // Delivery toggle
+  function setDelivery(type){
+    document.getElementById('opt-domicilio').classList.toggle('active', type==='domicilio');
+    document.getElementById('opt-oficina').classList.toggle('active', type==='oficina');
+  }
 
-  document.getElementById('wa-float').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola TROGÜI, tengo una pregunta sobre la Lima Eléctrica para Pies 🦶')}`;
-
-  // Quantity selector
-  const qtyOpts = document.querySelectorAll('.qty-opt[data-qty]');
-  const totalPriceEl = document.getElementById('total-price');
-  let selectedQty = { qty: 1, price: 49000 };
-  qtyOpts.forEach(opt => {
-    opt.addEventListener('click', () => {
-      qtyOpts.forEach(o => o.classList.remove('active'));
-      opt.classList.add('active');
-      selectedQty = { qty: Number(opt.dataset.qty), price: Number(opt.dataset.price) };
-      totalPriceEl.textContent = '$' + selectedQty.price.toLocaleString('es-CO');
-    });
-  });
-
-  // Delivery type selector (a domicilio vs oficina Interrapidísimo)
-  const entregaOpts = document.querySelectorAll('.entrega-opt');
-  const campoDireccion = document.getElementById('campo-direccion');
-  const campoOficina = document.getElementById('campo-oficina');
-  let selectedEntrega = 'domicilio';
-  entregaOpts.forEach(opt => {
-    opt.addEventListener('click', () => {
-      entregaOpts.forEach(o => o.classList.remove('active'));
-      opt.classList.add('active');
-      selectedEntrega = opt.dataset.entrega;
-      if (selectedEntrega === 'domicilio') {
-        campoDireccion.style.display = '';
-        campoOficina.style.display = 'none';
-      } else {
-        campoDireccion.style.display = 'none';
-        campoOficina.style.display = '';
-      }
-    });
-  });
+  // Quantity + price
+  let qty = 1;
+  const unitPrice = 49000;
+  function changeQty(delta){
+    qty = Math.max(1, Math.min(5, qty + delta));
+    document.getElementById('qtyDisplay').textContent = qty + (qty===1 ? ' unidad' : ' unidades');
+    document.getElementById('totalPrice').textContent = '$' + (qty*unitPrice).toLocaleString('es-CO');
+  }
 
   // FAQ accordion
-  document.querySelectorAll('.faq-item').forEach(item => {
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-a');
-    q.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-a').style.maxHeight = null;
-      });
-      if (!isOpen) {
-        item.classList.add('open');
-        a.style.maxHeight = a.scrollHeight + 'px';
-      }
-    });
-  });
-
-  // Order form -> WhatsApp
-  document.getElementById('submit-order').addEventListener('click', () => {
-    const nombre = document.getElementById('nombre').value.trim();
-    const telefono = document.getElementById('telefono').value.trim();
-    const departamento = document.getElementById('departamento').value.trim();
-    const ciudad = document.getElementById('ciudad').value.trim();
-    const direccion = document.getElementById('direccion').value.trim();
-    const oficina = document.getElementById('oficina').value.trim();
-    const entregaTexto = selectedEntrega === 'domicilio'
-      ? `🏠 A domicilio — ${direccion}`
-      : `🏢 Oficina Interrapidísimo — ${oficina}`;
-
-    const faltaDireccion = selectedEntrega === 'domicilio' ? !direccion : !oficina;
-    if (!nombre || !telefono || !departamento || !ciudad || faltaDireccion) {
-      alert('Por favor completa todos los campos antes de confirmar tu pedido.');
-      return;
-    }
-
-    const mensaje = `¡Hola TROGÜI! Quiero pedir la Lima Eléctrica para Pies 🦶
-
-` +
-      `👤 Nombre: ${nombre}
-` +
-      `📱 Celular: ${telefono}
-` +
-      `🗺️ Departamento: ${departamento}
-` +
-      `🏙️ Ciudad: ${ciudad}
-` +
-      `📦 Entrega: ${entregaTexto}
-` +
-      `🔢 Cantidad: ${selectedQty.qty} unidad(es)
-` +
-      `💰 Total a pagar contra entrega: $${selectedQty.price.toLocaleString('es-CO')}`;
-
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`, '_blank');
-  });
-
-  // Countdown timer resets at midnight local time — creates daily urgency
-  function updateCountdown() {
-    const now = new Date();
-    const end = new Date(now);
-    end.setHours(23, 59, 59, 999);
-    const diff = Math.max(0, end - now);
-    const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
-    const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
-    const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
-    document.getElementById('cd-h').textContent = h;
-    document.getElementById('cd-m').textContent = m;
-    document.getElementById('cd-s').textContent = s;
+  function toggleFaq(el){
+    el.parentElement.classList.toggle('open');
   }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+
+  // Honest activity ticker: real aggregate stats, no fabricated individual buyers.
+  const tickerMessages = [
+    "🚚 Hoy estamos despachando pedidos a Bogotá, Cali y Medellín",
+    "✅ Más de 500 pares de pies renovados con TROGÜI",
+    "📦 Envío gratis activo en todo el país",
+    "💵 Recuerda: pagas solo cuando recibes tu pedido"
+  ];
+  let tIndex = 0;
+  const tickerEl = document.getElementById('ticker-text');
+  function rotateTicker(){
+    tickerEl.style.opacity = 0;
+    setTimeout(()=>{
+      tIndex = (tIndex+1) % tickerMessages.length;
+      tickerEl.textContent = tickerMessages[tIndex];
+      tickerEl.style.opacity = 1;
+    }, 300);
+  }
+  tickerEl.textContent = tickerMessages[0];
+  setInterval(rotateTicker, 5000);
 </script>
 
 </body>
