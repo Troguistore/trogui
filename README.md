@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>Lima Eléctrica Spa Pies™ — Envío gratis + Pago contra entrega</title>
+<title>TROGÜI — Lima Eléctrica para Pies · Envío gratis + Pago contra entrega</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1E2B25;
-    --bg:#EFF5F0;
-    --bg-soft:#FAFCF9;
-    --pine:#173A31;
-    --pine-2:#20493E;
-    --coral:#E86A57;
-    --coral-dark:#C6503F;
-    --gold:#C89B3C;
-    --line:rgba(23,58,49,0.14);
-    --shadow:0 20px 45px -20px rgba(23,58,49,0.35);
+    --ink:#12211F;
+    --bg:#FBF6EF;
+    --bg-soft:#FFFDFB;
+    --pine:#0F181D;
+    --pine-2:#233A3F;
+    --coral:#FE5E06;
+    --coral-dark:#DA4E00;
+    --gold:#0F181D;
+    --line:rgba(15,24,29,0.12);
+    --shadow:0 20px 45px -20px rgba(15,24,29,0.4);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -49,9 +49,29 @@
   .topbar{background:var(--pine);color:#EFF5F0;font-size:13px;text-align:center;padding:8px 12px;font-weight:600;letter-spacing:0.01em;}
   .topbar span.dot{opacity:0.6;margin:0 8px;}
 
+  /* ---- TROGÜI wordmark (recreated from brand logo: two interlocking rings for the double-O) ---- */
+  .logo-row{display:flex;align-items:center;margin-bottom:22px;}
+  .trogui-logo{display:inline-flex;align-items:center;font-family:'Fraunces',serif;font-weight:600;font-size:26px;letter-spacing:0.01em;color:#fff;}
+  .trogui-logo .rings{
+    display:inline-flex;position:relative;width:40px;height:26px;margin:0 1px;
+  }
+  .trogui-logo .rings span{
+    position:absolute;top:1px;width:24px;height:24px;border-radius:50%;
+    border:3px solid currentColor;background:transparent;
+  }
+  .trogui-logo .rings span:first-child{left:0;}
+  .trogui-logo .rings span:last-child{left:16px;}
+  .trogui-logo .umlaut{position:relative;}
+  .trogui-logo .umlaut::before,.trogui-logo .umlaut::after{
+    content:"";position:absolute;top:-9px;width:4px;height:4px;border-radius:50%;background:currentColor;
+  }
+  .trogui-logo .umlaut::before{left:4px;}
+  .trogui-logo .umlaut::after{left:13px;}
+  .trogui-logo.dark{color:var(--pine);}
+
   /* ---- hero ---- */
   .hero{
-    background:radial-gradient(120% 140% at 85% -10%, #2C5C4E 0%, var(--pine) 55%, #102820 100%);
+    background:radial-gradient(120% 140% at 85% -10%, #35271E 0%, var(--pine) 55%, #0A1114 100%);
     color:#F4F7F2;
     padding:38px 0 54px;
     position:relative;
@@ -229,7 +249,7 @@
   .faq-a p{font-size:14.5px;line-height:1.6;color:rgba(30,43,37,0.7);padding:0 4px 18px;margin:0;}
 
   /* ---- order form ---- */
-  .order{background:radial-gradient(120% 140% at 15% 0%, #2C5C4E 0%, var(--pine) 55%, #102820 100%);color:#fff;}
+  .order{background:radial-gradient(120% 140% at 15% 0%, #35271E 0%, var(--pine) 55%, #0A1114 100%);color:#fff;}
   .order-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:44px;align-items:flex-start;}
   .order-card{
     background:#fff;color:var(--ink);border-radius:20px;padding:28px;box-shadow:var(--shadow);
@@ -306,6 +326,9 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
+      <div class="logo-row">
+        <span class="trogui-logo">TR<span class="rings"><span></span><span></span></span><span class="umlaut">ÜI</span></span>
+      </div>
       <div class="badge-row">
         <span class="badge">⭐ 4.8/5 valoración</span>
         <span class="badge">🔋 Recargable USB</span>
@@ -332,7 +355,7 @@
   <div class="wrap trust-grid">
     <div><span>🚚</span>Envío gratis</div>
     <div><span>💵</span>Pago contra entrega</div>
-    <div><span>⏱️</span>Entrega 2–5 días hábiles</div>
+    <div><span>📦</span>Interrapidísimo · Envía · Coordinadora</div>
     <div><span>🔁</span>Garantía de cambio</div>
   </div>
 </div>
@@ -516,12 +539,40 @@
         <input id="telefono" type="tel" placeholder="Ej: 300 123 4567">
       </div>
       <div class="field">
-        <label for="ciudad">Ciudad</label>
-        <input id="ciudad" type="text" placeholder="Ej: Bogotá">
+        <label for="departamento">Departamento</label>
+        <select id="departamento">
+          <option value="">Selecciona tu departamento</option>
+          <option>Amazonas</option><option>Antioquia</option><option>Arauca</option><option>Atlántico</option>
+          <option>Bogotá D.C.</option><option>Bolívar</option><option>Boyacá</option><option>Caldas</option>
+          <option>Caquetá</option><option>Casanare</option><option>Cauca</option><option>Cesar</option>
+          <option>Chocó</option><option>Córdoba</option><option>Cundinamarca</option><option>Guainía</option>
+          <option>Guaviare</option><option>Huila</option><option>La Guajira</option><option>Magdalena</option>
+          <option>Meta</option><option>Nariño</option><option>Norte de Santander</option><option>Putumayo</option>
+          <option>Quindío</option><option>Risaralda</option><option>San Andrés y Providencia</option>
+          <option>Santander</option><option>Sucre</option><option>Tolima</option><option>Valle del Cauca</option>
+          <option>Vaupés</option><option>Vichada</option>
+        </select>
       </div>
       <div class="field">
+        <label for="ciudad">Ciudad / Municipio</label>
+        <input id="ciudad" type="text" placeholder="Ej: Bogotá">
+      </div>
+
+      <div class="field">
+        <label>¿Cómo prefieres recibirlo?</label>
+        <div class="qty-row">
+          <div class="qty-opt entrega-opt active" data-entrega="domicilio">🏠 A domicilio</div>
+          <div class="qty-opt entrega-opt" data-entrega="oficina">🏢 Oficina Interrapidísimo</div>
+        </div>
+      </div>
+
+      <div class="field" id="campo-direccion">
         <label for="direccion">Dirección de entrega</label>
         <input id="direccion" type="text" placeholder="Barrio, calle, número">
+      </div>
+      <div class="field" id="campo-oficina" style="display:none;">
+        <label for="oficina">Oficina Interrapidísimo más cercana</label>
+        <input id="oficina" type="text" placeholder="Ej: Oficina Interrapidísimo Chapinero">
       </div>
 
       <div class="order-summary">
@@ -537,7 +588,8 @@
 
 <footer>
   <div class="wrap">
-    <div>Lima Eléctrica Spa Pies™ · Distribución en Colombia</div>
+    <span class="trogui-logo" style="font-size:20px;">TR<span class="rings"><span></span><span></span></span><span class="umlaut">ÜI</span></span>
+    <div style="margin-top:6px;">Envíos a toda Colombia por Interrapidísimo, Envía y Coordinadora</div>
     <div>Atención al cliente por WhatsApp · Lunes a sábado, 8am–7pm</div>
     <div style="opacity:0.6;">Este producto es de uso cosmético para el cuidado de la piel. No sustituye atención podológica o médica profesional.</div>
   </div>
@@ -552,12 +604,12 @@
 
 <script>
   // ======= CONFIGURA AQUÍ TU NÚMERO DE WHATSAPP (con indicativo 57, sin +, sin espacios) =======
-  const WHATSAPP_NUMBER = "573001234567"; // <-- reemplaza este número por el tuyo
+  const WHATSAPP_NUMBER = "573206572598";
 
-  document.getElementById('wa-float').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, tengo una pregunta sobre la Lima Eléctrica Spa Pies 🦶')}`;
+  document.getElementById('wa-float').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola TROGÜI, tengo una pregunta sobre la Lima Eléctrica para Pies 🦶')}`;
 
   // Quantity selector
-  const qtyOpts = document.querySelectorAll('.qty-opt');
+  const qtyOpts = document.querySelectorAll('.qty-opt[data-qty]');
   const totalPriceEl = document.getElementById('total-price');
   let selectedQty = { qty: 1, price: 49000 };
   qtyOpts.forEach(opt => {
@@ -566,6 +618,26 @@
       opt.classList.add('active');
       selectedQty = { qty: Number(opt.dataset.qty), price: Number(opt.dataset.price) };
       totalPriceEl.textContent = '$' + selectedQty.price.toLocaleString('es-CO');
+    });
+  });
+
+  // Delivery type selector (a domicilio vs oficina Interrapidísimo)
+  const entregaOpts = document.querySelectorAll('.entrega-opt');
+  const campoDireccion = document.getElementById('campo-direccion');
+  const campoOficina = document.getElementById('campo-oficina');
+  let selectedEntrega = 'domicilio';
+  entregaOpts.forEach(opt => {
+    opt.addEventListener('click', () => {
+      entregaOpts.forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+      selectedEntrega = opt.dataset.entrega;
+      if (selectedEntrega === 'domicilio') {
+        campoDireccion.style.display = '';
+        campoOficina.style.display = 'none';
+      } else {
+        campoDireccion.style.display = 'none';
+        campoOficina.style.display = '';
+      }
     });
   });
 
@@ -590,26 +662,34 @@
   document.getElementById('submit-order').addEventListener('click', () => {
     const nombre = document.getElementById('nombre').value.trim();
     const telefono = document.getElementById('telefono').value.trim();
+    const departamento = document.getElementById('departamento').value.trim();
     const ciudad = document.getElementById('ciudad').value.trim();
     const direccion = document.getElementById('direccion').value.trim();
+    const oficina = document.getElementById('oficina').value.trim();
+    const entregaTexto = selectedEntrega === 'domicilio'
+      ? `🏠 A domicilio — ${direccion}`
+      : `🏢 Oficina Interrapidísimo — ${oficina}`;
 
-    if (!nombre || !telefono || !ciudad || !direccion) {
+    const faltaDireccion = selectedEntrega === 'domicilio' ? !direccion : !oficina;
+    if (!nombre || !telefono || !departamento || !ciudad || faltaDireccion) {
       alert('Por favor completa todos los campos antes de confirmar tu pedido.');
       return;
     }
 
-    const mensaje = `¡Hola! Quiero pedir la Lima Eléctrica Spa Pies 🦶
+    const mensaje = `¡Hola TROGÜI! Quiero pedir la Lima Eléctrica para Pies 🦶
 
 ` +
       `👤 Nombre: ${nombre}
 ` +
       `📱 Celular: ${telefono}
 ` +
+      `🗺️ Departamento: ${departamento}
+` +
       `🏙️ Ciudad: ${ciudad}
 ` +
-      `📍 Dirección: ${direccion}
+      `📦 Entrega: ${entregaTexto}
 ` +
-      `📦 Cantidad: ${selectedQty.qty} unidad(es)
+      `🔢 Cantidad: ${selectedQty.qty} unidad(es)
 ` +
       `💰 Total a pagar contra entrega: $${selectedQty.price.toLocaleString('es-CO')}`;
 
