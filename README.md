@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>TROGÜI TV Stick | Convierte tu TV en Smart TV</title>
+<title>TROGÜI TV Stick | Convierte y actualiza tu TV en Smart TV</title>
 <meta name="description" content="TV Stick Android 4K TROGÜI. Envío gratis a toda Colombia. Pago contra entrega.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -243,7 +242,7 @@
     <div class="section-title">
       <span class="eyebrow">El problema</span>
       <h2>Tu TV todavía funciona. Solo se quedó atrás.</h2>
-      <p>No necesitas comprar un televisor nuevo — dale una nueva vida al que ya tienes.</p>
+      <p>No necesitas comprar un televisor nuevo — dale una nueva vida al que ya tienes con app como Netflix, Xuper TV, Youtube, Disney y más GRATIS.</p>
     </div>
     <div class="ba-grid" style="grid-template-columns:1fr; max-width:520px; margin:0 auto;">
       <div class="ba-card ba-after">
@@ -259,7 +258,8 @@
   <div class="wrap">
     <div class="section-title">
       <span class="eyebrow">Estilo de vida</span>
-      <h2>Momentos que se disfrutan mejor en pantalla grande</h2>
+      <h2>Fútbol, películas y diversión en familia! 🇨🇴⚽🍿
+Disfruta tus contenidos favoritos desde tu TV. CANLES COMO WIN, WIN SPORT Y MÁS TOTALMENTE GRATIS ✅(AHORRA DINERO)</h2>
     </div>
     <div class="ba-grid" style="max-width:900px;">
       <div class="ba-card" style="border:1px solid var(--line);">
@@ -477,7 +477,7 @@
     </div>
     <div id="faqList">
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Sirve en cualquier televisor?</span><span class="faq-plus">+</span></div><div class="faq-a">Sí, funciona en cualquier TV que tenga entrada HDMI, sea o no Smart TV. Solo necesitas conexión WiFi en casa.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Necesito pagar algo aparte para usarlo?</span><span class="faq-plus">+</span></div><div class="faq-a">El dispositivo te da acceso a la tienda de aplicaciones para instalar tus apps de streaming. Las suscripciones de pago de cada plataforma corren por tu cuenta, igual que en cualquier Smart TV.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Necesito pagar algo aparte para usarlo?</span><span class="faq-plus">+</span></div><div class="faq-a">El dispositivo te da acceso a la tienda de aplicaciones para instalar tus apps de streaming. tiene app como Xuper TV que son gratis ahí puedes ver series, película, y más de 5000 canales nacionales e internacionales gratis.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿De verdad pago solo cuando lo recibo?</span><span class="faq-plus">+</span></div><div class="faq-a">Sí. No pagas nada por adelantado. Pagas en efectivo al mensajero cuando el producto llega a tu dirección.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Cuánto tarda el envío?</span><span class="faq-plus">+</span></div><div class="faq-a">Entre 2 y 5 días hábiles dependiendo de tu ciudad, a través de Interrapidísimo, envía o Coordinadora.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Es difícil de instalar?</span><span class="faq-plus">+</span></div><div class="faq-a">No. Se conecta al puerto HDMI de tu TV, seleccionas tu red WiFi, y en minutos queda listo para usar.</div></div>
