@@ -379,24 +379,29 @@
   <div class="wrap">
     <div class="section-title">
       <span class="eyebrow">Lo que dicen (vista previa)</span>
-      <h2>Así se verán las reseñas de tus clientes</h2>
+      <h2>Reseñas</h2>
     </div>
-    <div class="reviews-note">⚠️ Estas tarjetas son un ejemplo de diseño, no reseñas reales todavía. Reemplázalas cuando tengas comentarios reales de tus clientes.</div>
+    <div class="reviews-note"> ✅ LO QUE DICEN NUESTROS CLIENTES.</div>
     <div class="review-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>"Aquí va el comentario real que te escriba tu cliente sobre su experiencia con el producto."</p>
-        <div class="review-who"><div class="review-avatar">?</div><div><b>Nombre del cliente</b><span>Ciudad, Departamento</span></div></div>
+        <p>"Me gustó bastante. La instalación fue sencilla y ahora puedo aprovechar mucho más mi televisor. Llegó bien empacado."</p>
+        <div class="review-who"><div class="review-avatar">?</div><div><b>Andres Felipe Torres</b><span>Cali, Valle del Cauca</span></div></div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>"Aquí va el comentario real que te escriba tu cliente sobre su experiencia con el producto."</p>
-        <div class="review-who"><div class="review-avatar">?</div><div><b>Nombre del cliente</b><span>Ciudad, Departamento</span></div></div>
+        <p>"Muy cumplidos me lo dejaron en Interrapidisimo y lo fui a reclamar estoy viendo los partidos en win sport gratis me ahorré ahí unos pesos."</p>
+        <div class="review-who"><div class="review-avatar">?</div><div><b>Mauricio Carvajal</b><span>Itagui, Antioquia</span></div></div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>"Aquí va el comentario real que te escriba tu cliente sobre su experiencia con el producto."</p>
-        <div class="review-who"><div class="review-avatar">?</div><div><b>Nombre del cliente</b><span>Ciudad, Departamento</span></div></div>
+        <p>"Al principio tenía dudas porq uno a veces compra por internet y lo engañan pero investigue sobre trogui y me arriesgue y gracias a Dios me llegó bien 🙏🥰mi nieto me lo ayudó a instlar así veo mis novelas gratis tienen un pocoton de canales y no me aburro de estar en la casa."</p>
+        <div class="review-who"><div class="review-avatar">?</div><div><b>Gladys Ortega Jaramillo</b><span>Medellin, Antioquia</span></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"yo tengo de los tele barrigones y ha funcionado muy bien 👍 gracias muchchos fácil de instalar."</p>
+        <div class="review-who"><div class="review-avatar">?</div><div><b>Hernando Castro Peña</b><span>Quibdo, Choco</span></div></div>
       </div>
     </div>
   </div>
@@ -474,7 +479,7 @@
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Sirve en cualquier televisor?</span><span class="faq-plus">+</span></div><div class="faq-a">Sí, funciona en cualquier TV que tenga entrada HDMI, sea o no Smart TV. Solo necesitas conexión WiFi en casa.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Necesito pagar algo aparte para usarlo?</span><span class="faq-plus">+</span></div><div class="faq-a">El dispositivo te da acceso a la tienda de aplicaciones para instalar tus apps de streaming. Las suscripciones de pago de cada plataforma corren por tu cuenta, igual que en cualquier Smart TV.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿De verdad pago solo cuando lo recibo?</span><span class="faq-plus">+</span></div><div class="faq-a">Sí. No pagas nada por adelantado. Pagas en efectivo al mensajero cuando el producto llega a tu dirección.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Cuánto tarda el envío?</span><span class="faq-plus">+</span></div><div class="faq-a">Entre 2 y 5 días hábiles dependiendo de tu ciudad, a través de Interrapidísimo o Coordinadora.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Cuánto tarda el envío?</span><span class="faq-plus">+</span></div><div class="faq-a">Entre 2 y 5 días hábiles dependiendo de tu ciudad, a través de Interrapidísimo, envía o Coordinadora.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>¿Es difícil de instalar?</span><span class="faq-plus">+</span></div><div class="faq-a">No. Se conecta al puerto HDMI de tu TV, seleccionas tu red WiFi, y en minutos queda listo para usar.</div></div>
     </div>
   </div>
