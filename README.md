@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>TROGÜI TV Stick | Convierte y actualiza tu TV en Smart TV</title>
-<meta name="description" content="TV Stick Android 4K TROGÜI. Envío gratis a toda Colombia. Pago contra entrega.">
+<meta name="description" content="TV Stick Android 4K de TROGÜI. Envío gratis a toda Colombia. Pago contra entrega.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -213,7 +213,8 @@
         <span class="price-now">$89.000</span>
       </div>
       <a href="#pedido" class="cta-primary">🛒 Pedir ahora — Pago contra entrega</a>
-      <p class="cta-sub">No pagas nada ahora. Confirmamos tu pedido por WhatsApp y pagas al recibirlo.</p>
+      <p class="cta-sub">No pagas nada ahora. Confirmamos tu pedido por WhatsApp y pagas al recibirlo
+        PROMOCIÓN VÁLIDA HASTA EL 31 DE JULIO.</p>
       <div class="trust-row">
         <span class="trust-chip">🚚 Envío gratis</span>
         <span class="trust-chip">💵 Contraentrega</span>
