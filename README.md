@@ -280,7 +280,7 @@ Disfruta tus contenidos favoritos desde tu TV. CANLES COMO WIN, WIN SPORT Y MÁS
       <h2>Esto es lo que puedes hacer con él</h2>
     </div>
     <div class="feat-grid">
-      <div class="feat-card"><div class="feat-icon">🎬</div><h3>Entretenimiento en pantalla grande</h3><p>Tus series, películas y videos, en la comodidad de tu sala.</p></div>
+      <div class="feat-card"><div class="feat-icon">🎬</div><h3>Entretenimiento en pantalla grande</h3><p>Tus series, películas y videos GRATIS en la comodidad de tu sala.</p></div>
       <div class="feat-card"><div class="feat-icon">📺</div><h3>Nueva vida a tu TV</h3><p>No necesitas comprar un televisor nuevo para tener funciones Smart.</p></div>
       <div class="feat-card"><div class="feat-icon">⚡</div><h3>Instalación sencilla</h3><p>Se conecta al HDMI y en minutos queda listo para usar.</p></div>
       <div class="feat-card"><div class="feat-icon">📱</div><h3>Espejo de tu celular</h3><p>Pasa fotos, videos y música a la pantalla grande con AIRSCREEN.</p></div>
@@ -379,7 +379,7 @@ Disfruta tus contenidos favoritos desde tu TV. CANLES COMO WIN, WIN SPORT Y MÁS
 <section>
   <div class="wrap">
     <div class="section-title">
-      <span class="eyebrow">Lo que dicen (vista previa)</span>
+      <span class="eyebrow">PARA QUE ESCRIBAS TU RESEÑAS DEBES HACERLO CON EL NÚMERO DE GUÍA YA ENTREGADO EL PEDIDO)</span>
       <h2>Reseñas</h2>
     </div>
     <div class="reviews-note"> ✅ LO QUE DICEN NUESTROS CLIENTES.</div>
@@ -390,7 +390,7 @@ Disfruta tus contenidos favoritos desde tu TV. CANLES COMO WIN, WIN SPORT Y MÁS
         <div class="review-who"><div class="review-avatar">?</div><div><b>Andres Felipe Torres</b><span>Cali, Valle del Cauca</span></div></div>
       </div>
       <div class="review-card">
-        <div class="review-stars">★★★★★</div>
+        <div class="review-stars">★★★★</div>
         <p>"Muy cumplidos me lo dejaron en Interrapidisimo y lo fui a reclamar estoy viendo los partidos en win sport gratis me ahorré ahí unos pesos."</p>
         <div class="review-who"><div class="review-avatar">?</div><div><b>Mauricio Carvajal</b><span>Itagui, Antioquia</span></div></div>
       </div>
